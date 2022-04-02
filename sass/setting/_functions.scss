@@ -1,0 +1,91 @@
+@use "sass:math";
+@use "variables" as *;
+
+// font-size 設定 ///////////////////////////////////////////////////
+// 使い方 font-family: ff(en);
+
+$font-family: (
+    // best-sansは池田氏推奨のもの
+    baseFont:
+        (
+        'YuMincho','Yu Mincho','游明朝体',sans-serif
+        ),
+    // Notoフォントを使う場合は下記を有効にせよ
+    // notoSans: ("NotoSans", sans-serif),
+    // notoSerif: ("NotoSerif", serif),
+    //英字フォントについては、上書きの可能性のある（かつ変更の可能性のある）英字フォントは変数として持っておき一括で変更できるようにしておくと便利です。
+    arimo: ('Arimo', sans-serif),
+    en: ('trajan-pro-3',serif)
+);
+
+@function ff($ff) {
+    @return #{map-get($font-family, $ff)};
+}
+
+// font-size 設定 ///////////////////////////////////////////////////
+// 使い方の例 font-size: fz(h-lv1);
+$font-size: (
+    // pc版
+    h-lv1: math.div(32, 16) + rem,
+    h-lv2: math.div(24, 16) + rem,
+    h-lv3: math.div(20, 16) + rem,
+    h-lv4: math.div(16, 16) + rem,
+    text-m: math.div(16, 16) + rem,
+    text-s: math.div(12, 16) + rem,
+    // sp版
+    h-sp-lv1: math.div(32, 640) * 100vw,
+    h-sp-lv2: math.div(24, 640) * 100vw,
+    h-sp-lv3: math.div(20, 640) * 100vw,
+    h-sp-lv4: math.div(16, 640) * 100vw,
+    text-sp-m: math.div(16, 640) * 100vw,
+    text-sp-s: math.div(12, 640) * 100vw
+);
+
+@function fz($fz) {
+    @return #{map-get($font-size, $fz)};
+}
+
+// pxをvw変換 /////////////////////////////////////////////////////////
+// まず基本のブレイクポイントを設定（$base: 850）←この部分。このブレイクポイントでよければ margin: vw(40); でOK
+// 使い方 margin: vw(40,1024);など ← これは（$base: 850）以外で使う場合の書き方、第二引数に指定したい横幅を記述
+
+@function vw($px, $base: 640) {// baseにはデザインカンプ（SP版）の横幅を入れる。ブレイクポイントじゃないよ！
+    $value: $px;
+
+    $value: math.div($px, $base) * 100vw;
+
+    @return $value;
+}
+
+
+// color 設定 ////////////////////////////////////////////////////////
+// 使い方 color: c(main);
+$colors: (
+    main: #6f7d6d,
+    sub: #b7beb6,
+    accent: red,
+    text-bk: #001405,
+    text-wh: #fff,
+    gray: #363636,
+);
+
+@function c($color) {
+    @return #{map-get($colors, $color)};
+}
+
+// z-index管理 ///////////////////////////////////////////////////////
+// 使い方 z-index: z(one); emmet=zz
+
+$z-index: (
+    back: -1,
+    one: 10,
+    header: 20,
+    nav: 30,
+    pulldown: 0,
+    child: 0,
+    loading: 900,
+    modal: 1000,
+);
+@function z($zz) {
+    @return #{map-get($z-index, $zz)};
+}

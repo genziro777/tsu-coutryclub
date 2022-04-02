@@ -1,0 +1,54 @@
+@use "setting" as *;
+
+#footer {
+    background-color: #fff;
+    height: vw(90);
+    display: grid;
+    place-items: center;
+    @media not all and (max-width: $pc) {
+        padding-top: 57px;
+        display: block;
+        height: 209px;
+        text-align: center;
+        background-color: #cfc;
+    }
+}
+.footerNav {
+    display: none;
+    @media not all and (max-width: $pc) {
+        display: block;
+    }
+    .menu {
+        @media not all and (max-width: $pc) {
+            display: grid;
+            grid-template-columns: repeat(
+                10,
+                auto
+            ); // auto=コンテンツ幅にしてくれる。1fr=5つとも同じ幅になる。
+            justify-content: space-between;
+            width: 959px;
+            font-size: 12px;
+            font-family: NotoSans;
+            color: #363636;
+            @include ls(50);
+            margin: 0 auto 19px;
+        }
+    }
+}
+.copyright__txt {
+    font-size: vw(12);
+    @include ls(60);
+    color: c(gray);
+    font-family: ff(arimo);
+    @media not all and (max-width: $pc) {
+        font-size: 12px;
+    }
+}
+.sns {
+    display: none;
+    @media not all and (max-width: $pc) {
+        display: block;
+        margin-bottom: 31px;
+
+    }
+}

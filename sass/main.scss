@@ -1,0 +1,15 @@
+// 読み込み順は下記の通りになる(sassGlob)
+
+@use "setting/index";
+
+@use "base/*";
+
+@use "layout/*";
+
+@use "modules/*";
+
+@use "components/*";
+
+@use "pages/*";
+
+@use "external/*";

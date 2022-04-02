@@ -1,0 +1,38 @@
+@use "setting" as *;
+
+.ly-w-s {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.ol-decimal {
+    margin-bottom: 100px;
+
+    list-style: decimal;
+}
+
+.ol-cnt {
+    margin-left: 1em; // サイトに合せて調整 */
+    margin-bottom: 100px;
+    li {
+        list-style-type: none;
+        counter-increment: cnt;
+        position: relative;
+        &::before {
+            content: "(" counter(cnt) ") ";
+            display: inline-block;
+            margin-left: -2.5em; // サイトに合せて調整 */
+            width: 2em; // サイトに合せて調整 */
+            text-align: right;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &:first-child {
+            counter-reset: cnt 8;
+        }
+    }
+}
+.ul-disc {
+    list-style: disc;
+}

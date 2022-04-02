@@ -1,0 +1,57 @@
+@use "setting" as *;
+
+// html {
+//     scroll-behavior: smooth;
+// }
+body {
+    min-height: 100vh;
+    font-family: ff(baseFont);
+}
+.main {
+    color: #fff;
+}
+.no-js .lazy {//必須
+    display: none;
+}
+.contents-layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    padding-bottom: 100px;
+}
+.ly-width {
+    @media (max-width: $pc) {
+        width: unquote('min(100% - 300px , 1200px)');
+        margin-inline: auto;
+    
+    }
+}
+// .ly-width {
+//     max-width: 1120px;
+//     padding-left: 40px;
+//     padding-right: 40px;
+//     margin: 0 auto;
+//     @media (max-width: $sp) {
+//         padding-left: vw(24);
+//         padding-right: vw(24);
+//     }
+// }
+// p {
+//     font-feature-settings: 'palt';
+// }
+
+// =============== PCでの電話番号リンク無効 =============== */
+// @media not all and (max-width: 767px) {
+//     a[href*="tel:"] {
+//         cursor: default;
+//         pointer-events: none;
+//     }
+// }
+
+
+.br {
+    display: none;
+    @media (max-width: $sp) {
+        display: block;
+    }
+}

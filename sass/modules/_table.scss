@@ -1,0 +1,50 @@
+@use "setting" as *;
+
+.table {
+    // 全テーブル共通のスタイル */
+    border-collapse: collapse;
+    text-align: left;
+}
+tr {
+    vertical-align: top;
+}
+th {
+    border-bottom: 1px solid #b6bbc0;
+    padding: 10px 0;
+    padding-left: 10px;
+    width: 30%;
+}
+td {
+    border-bottom: 1px solid #b6bbc0;
+    padding: 10px 0;
+    padding-left: 20px;
+    width: 70%;
+}
+
+table:not(.lv2-table) {
+    // td内テーブル以外のテーブルのスタイル */
+    width: 800px;
+}
+
+.lv2-table {
+    margin-left: 10px;
+    width: 100%;
+}
+.lv2-table > tbody > tr > th {
+    border-bottom: none;
+    width: auto;
+}
+.lv2-table > tbody > tr > td {
+    border-bottom: none;
+    padding-left: 10px;
+    width: auto;
+}
+
+.td-has-table {
+    // tableを子要素に持つtdのpaddingを除去 */
+    padding: 0;
+}
+
+.area {
+    background-color: rgba(212, 221, 228, 0.5);
+}

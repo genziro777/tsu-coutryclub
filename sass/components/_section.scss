@@ -1,0 +1,47 @@
+@use "setting" as *;
+
+.section__ttl {
+    font-family: ff(en);
+    position: relative;
+    font-size: vw(22);
+    font-weight: bold;
+    @include ls(100);
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: vw(1);
+        height: vw(407.72);
+        background-color: #fff;
+        z-index: 2;
+        left: vw(-36);
+        top: vw(-50);
+        @media not all and (max-width: $pc){
+            width: 1px;
+            height: 407.72px;
+        }
+    }
+    @media not all and (max-width: $pc){
+        font-size: 22px;
+        @include ls(400);
+    }
+}
+.section__subTtl {
+    font-size: vw(14);
+    @include ls(400);
+    @media not all and (max-width: $pc){
+        font-size: 14px;
+
+    }
+
+}
+.section__num {
+    font-size: vw(18);
+    font-weight: bold;
+    @include ls(400);
+    @media not all and (max-width: $pc){
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+}

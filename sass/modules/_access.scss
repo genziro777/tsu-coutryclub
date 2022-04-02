@@ -1,0 +1,87 @@
+@use "setting" as *;
+
+.access {
+    background-color: #fff;
+    color: c(text-bk);
+    padding-top: vw(63);
+    text-align: center;
+    width: vw(474);
+    margin: 0 auto;
+}
+.access__num {
+    margin-bottom: vw(30);
+}
+
+.access__ttl {
+    font-family: ff(en);
+    font-size: vw(22);
+    @include ls(400);
+    margin-bottom: vw(17);
+}
+
+.access__subTtl {
+    font-size: vw(16);
+    @include ls(400);
+    margin-bottom: vw(80);
+}
+
+.address {
+    font-size: vw(16);
+    @include ls(400);
+}
+.address__ttl {
+    margin-bottom: vw(30);
+}
+.address__tel {
+    display: inline-block;
+    font-size: vw(34);
+    @include ls(100);
+    color: c(main);
+    border: 1px solid c(main);
+    width: vw(474);
+    height: vw(72);
+    display: grid;
+    place-items: center;
+    margin: 0 auto;
+    position: relative;
+    margin-top: vw(60);
+    margin-bottom: vw(22);
+    &::before {
+        content: "";
+        display: inline-block;
+        width: vw(48);
+        height: vw(43);
+        background-image: url(./../../assets/images/tel-icon.png);
+        background-size: contain;
+        vertical-align: middle;
+        position: absolute;
+        left: 9%;
+    }
+}
+
+.access__btn {
+    color: c(main);
+    font-size: vw(16);
+    font-weight: bold;
+    @include ls(100);
+    text-align-last: left;
+    position: relative;
+    padding-left: vw(10);
+    margin-left: vw(9);
+    margin-bottom: vw(60);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1vw;
+        transform: translateX(-50%) rotate(-90deg);
+        @include san2;
+        color: c(main);
+        left: vw(-3);
+    }
+}
+.map1 {
+    margin-bottom: vw(55);
+}
+.map2 {
+    margin-bottom: vw(12);
+}

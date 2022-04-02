@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja">
+    <!--====== OGPの使用を宣言をするもの =============================================-->
+    <!-- prefixの記載がないとシェアされた数などが上手く動作しない場合があるようなので極力記載する -->
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"><!-- 基本共通設定 -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>タイトル</title>
+        <meta name="description" content="100文字程度" />
+        <!--====== 基本共通設定 =============================================-->
+        <meta property="og:title" content="ページのタイトル" /><!-- そのページのh1タイトルみたいなもの -->
+        <meta property="og:type" content="website" /><!-- TOPページならwebsite,それ以外ならarticle。基本この2つしか使わない -->
+        <meta property="og:url" content="表示したいページのURL（絶対パス）" />
+        <meta property="og:image" content="表示したい画像のURL（絶対パス）" /><!-- PNGにすること -->
+        <!-- 以下省略可能だが、site_name, description, localeは載せたほうがいい -->
+        <meta property="og:description" content="記事の抜粋" />
+        <meta property="og:site_name" content="サイト名" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:audio" content="音声ファイルのURL（絶対パス）">
+        <meta property="og:video" content="動画ファイルのURL（絶対パス）">
+        <!--====== 基本共通設定 ここまで =============================================-->
+
+        <!--====== Twitter用 =============================================-->
+        <meta name="twitter:card" content="summary_large_image" />
+        <!-- 以下省略可能 -->
+        <meta name="twitter:site" content="Twitterカードのフッターで使用されるウェブサイトの@ユーザー名">
+        <meta name="twitter:creator" content="コンテンツ作成者/著者の@ユーザー名">
+
+        <!--====== Facebook用 =============================================-->
+        <!-- AppIDの取得方法：http://blog.sixapart.jp/2012-04/fb-app-id.html -->
+        <!-- 記載しなくても動作するが極力設定しよう -->
+        <!-- 1）App IDを指定すると、いいね！数や閲覧数、どの時間帯がユーザーの目にとまりやすいかなどを分析ができるFacebookインサイトを利用できるようになる -->
+        <!-- 2）サイトやブログの管理者をFacebookに伝えるためのタグです。また、いいねの数やどれくらいの人が見てくれたのか、どの時間帯がユーザーの目にとまりやすいかなどといった、Facebookからサイトへのトラフィック分析ができるFacebookインサイトを利用できるようになります。 -->
+        <meta property="fb:app_id" content="appIDを入力（15文字の半角数字）" /><!-- 省ける -->
+        <!-- OGP ここまで -->
+
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" size="180x180"/>
+        <!-- ファビコン jpg非推奨 ルートディレクトリに置く-->
+        <link rel="icon" href="favicon.ico" sizes="any"/>
+        <!----- safari抜きならSVGだけでOK SVGはsafariだけ非対応----->
+        <link rel="icon" href="icon.svg" type="image/svg+xml" />
+
+    </head>
+    <body>
+        <header id="header" class="DownMove">
+            <h1 class="siteLogo">
+                <a href="">
+                    <img
+                        src="https://via.placeholder.com/100x50/000/fff?text=LOGO"
+                        alt="Company"
+                        class="siteLogo__img"
+                    />
+                </a>
+            </h1>
+
+            <nav class="globalNav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">news</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">about us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <button id="hamburger" class="hamburger">
+                <span class="hamburger__bar barTop"></span>
+                <span class="hamburger__bar barMiddle"></span>
+                <span class="hamburger__bar barBottom"></span>
+            </button>
+
+            <nav class="globalNav--sp">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">news</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">about us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">services</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <footer id="footer">
+            <nav class="footerNav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">news</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">about us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">services</a>
+                    </li>
+
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- コピーライト -->
+            <p class="copyright">
+                <small class="copyright__txt"
+                    >&#169; 2019 PACIFIC MALL DEVELOPMENT CO.,LTD.</small
+                >
+            </p>
+
+
+    </body>
+</html>

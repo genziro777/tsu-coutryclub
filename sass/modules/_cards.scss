@@ -1,0 +1,28 @@
+@use "setting" as *;
+
+//auto-fitを3とか数字に帰ると、レスポンシブでも3カラムを強制的に維持する
+// .cards {
+//     display: grid;
+//     flex-wrap: wrap;
+//     grid-template-columns: repeat(auto-fit, 300px);
+//     gap: 20px;
+//     background-color: rgb(149, 226, 126);
+//     justify-content: center;
+//     width: 100%;
+// }
+.cards {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(2, auto);
+    gap: vw(15);
+    justify-content: center;
+    width: 100%;
+    padding-right: vw(20);
+    @media not all and (max-width: $pc){
+        grid-template-columns: repeat(3, auto);
+        gap: 87px;
+        width: 900px;
+        margin: 0 auto;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,64 @@
+@use "setting" as *;
+
+// headerの高さ指定
+$header-height-sp: vw(30);
+
+#hamburger,
+.hamburger__bar {
+    display: inline-block;
+    transition: all $time;
+    box-sizing: border-box;
+    display: none;
+    @media (max-width: $sp) {
+        display: block;
+    }
+}
+#hamburger {
+    position: absolute;
+    width:vw(30);
+    height: vw(20);
+    background: none;
+    border: none;
+    appearance: none;
+    left: vw(20);
+    top: vw(20);
+    cursor: pointer;
+    z-index: z(nav);
+}
+.hamburger__bar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: vw(1);
+    background-color: #fff;
+}
+.barTop {
+    top: 0%;
+}
+.barMiddle {
+    top: 50%;
+}
+.barBottom {
+    top: 100%;
+}
+
+#hamburger.active .barTop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+#hamburger.active .barMiddle {
+    opacity: 0;
+}
+#hamburger.active .barBottom {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+// ハンバーガーメニューオープン時、背景スクロール固定
+.no-scroll {
+    overflow: hidden;
+}

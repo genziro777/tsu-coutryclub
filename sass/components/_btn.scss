@@ -1,0 +1,40 @@
+@use "setting" as *;
+
+.btn {
+    display: inline-block;
+    width: vw(223);
+    max-width: 100%;
+    height: vw(34);
+    font-size: vw(16);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border: 1px solid #fff;
+    transition: 0.2s;
+    &:focus,
+    &:hover {
+        background-color: #fff;
+        color: c(main);
+    }
+    @media not all and (max-width: $pc) {
+        font-size: 16px;
+        font-weight: bold;
+        width: 223px;
+        height: 34px;
+    }
+}
+.btn--wh {
+    background-color: #fff;
+    opacity: 0.7;
+    color: c(text-bk);
+    &:focus,
+    &:hover {
+        background-color: c(main);
+        color: #fff;
+        opacity: 1;
+        border: 1px solid c(main);
+    }
+    @media not all and (max-width: $pc) {
+        display: none;
+    }
+}

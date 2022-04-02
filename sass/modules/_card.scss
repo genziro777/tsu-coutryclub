@@ -1,0 +1,109 @@
+@use "setting" as *;
+
+.card {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    margin-bottom: vw(80);
+    @media not all and (max-width: $pc) {
+        display: grid;
+        grid-template-areas: "a" "b" "c";
+        margin-bottom: 65px;
+    }
+}
+.card__ttl {
+    font-size: vw(16);
+    @include ls(200);
+    margin-bottom: vw(20);
+    @media not all and (max-width: $pc) {
+        font-size: 16px;
+        margin-bottom: 24px;
+        grid-area: a;
+        min-height: 32px;
+    }
+}
+.card__figure {
+    text-align: center;
+    margin-bottom: vw(20);
+    width: vw(291);
+    height: vw(183);
+
+    @media not all and (max-width: $pc) {
+        width: 242px;
+        height: 183px;
+        grid-area: c;
+        margin-bottom: 0;
+    }
+}
+.card__img {
+    vertical-align: bottom;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card__link {
+    font-size: vw(16);
+    font-weight: bold;
+    @include ls(100);
+    text-align: right;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1vw;
+        left: 28.5vw;
+        transform: translateX(-50%) rotate(-90deg);
+        @include san;
+        transition: .2s;
+        @media not all and (max-width: $pc) {
+            @include san-pc;
+            left: 135px;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-90deg);
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        width: vw(242);
+        height: vw(1);
+        background-color: #fff;
+        right: 0;
+        bottom: 0;
+        margin-top: vw(20);
+        transition: 0.2s;
+
+        @media not all and (max-width: $pc) {
+            width: 100%;
+            height: 1px;
+        }
+    }
+    @media not all and (max-width: $pc) {
+        font-size: 16px;
+        grid-area: b;
+        margin-bottom: 24px;
+        &:hover::after {
+            background-color: c(text-bk);
+        }
+        &:hover::before {
+            @include san-pc-hover;
+        }
+        &:hover {
+            a {
+                color: c(text-bk);
+
+            }
+
+        }
+    }
+    a {
+        transition: 0.2s;
+    }
+}
+
+.card__item4 {
+    @media not all and (max-width: $pc) {
+        display: none;
+    }
+}

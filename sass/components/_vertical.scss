@@ -1,0 +1,13 @@
+@use "setting" as *;
+
+.vertical {
+    writing-mode: vertical-rl; // 数字は横向く
+    text-orientation: upright; // 数字を縦にする
+    text-indent: 1em; // 必要なければ削除
+    margin: 0 auto;
+}
+.num {
+    text-combine-upright: all; // safari未対応
+    line-height: 1;
+    vertical-align: baseline;
+}

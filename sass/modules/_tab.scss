@@ -1,0 +1,44 @@
+@use "setting" as *;
+
+//tabの形状*/
+.tab {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none; //実案件では削除する
+}
+
+.tab__link {
+    display: block;
+    background: #ddd;
+    margin: 0 2px;
+    padding: 10px 20px;
+}
+//liにactiveクラスがついた時の形状*/
+.tab__list.active .tab__link {
+    background: rgb(160, 53, 53);
+}
+
+//エリアの表示非表示と形状*/
+.tabConte {
+    display: none; //はじめは非表示*/
+    opacity: 0; //透過0*/
+    background: #fff;
+    padding: 50px 20px;
+}
+
+//tabConteにis-activeというクラスがついた時の形状*/
+.tabConte.is-active {
+    display: block; //表示*/
+    animation-name: displayAnime; //ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

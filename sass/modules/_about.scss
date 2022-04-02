@@ -1,0 +1,26 @@
+@use "setting" as *;
+
+.about {
+    padding-top: vw(180);
+    padding-bottom: vw(128);
+    background-color: c(main);
+    padding-left: vw(20);
+    @media not all and (max-width: $pc){
+        padding-top: 230px;
+    }
+
+}
+.about__ttl {
+    margin-left: vw(54);
+    margin-bottom: vw(30);
+    padding-top: vw(10);
+    @media not all and (max-width: $pc){
+        margin-bottom: 25px;
+        padding-top: 32px;
+    }
+}
+.about__subTtl {
+    margin-left: vw(54);
+    margin-bottom: vw(30);
+
+}

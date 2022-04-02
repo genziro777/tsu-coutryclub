@@ -1,0 +1,78 @@
+@use "setting" as *;
+
+.eventInfo {
+    padding-bottom: vw(90);
+    background-color: c(main);
+    padding-left: vw(20);
+    @media not all and (max-width: $pc){
+        text-align: center;
+    }
+
+}
+.eventInfo__inner {
+    @media not all and (max-width: $pc){
+        width: 900px;
+        margin: 0 auto;
+    }
+}
+.eventInfo__num {
+    margin-bottom: vw(30);
+    @media not all and (max-width: $pc){
+        margin-bottom: 31px;
+    }
+
+}
+
+.eventInfo__ttl {
+    font-family: ff(en);
+    font-size: vw(22);
+    @include ls(400);
+    margin-bottom: vw(17);
+    @media not all and (max-width: $pc){
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 19px;
+
+    }
+}
+
+
+.eventInfo__subTtl {
+    font-size: vw(16);
+    @include ls(400);
+    margin-bottom: vw(80);
+    @media not all and (max-width: $pc){
+        font-size: 14px;
+        margin-bottom: 90px;
+    }
+}
+.eventInfo__btn {
+    margin: 0 auto;
+    @media not all and (max-width: $pc){
+        margin: 0 0 0 auto;
+        border: none;
+        text-align: right;
+        display: block;
+        text-align: right;
+        position: relative;
+        font-weight: normal;
+        @include ls(200);
+        &::after {
+            content: "";
+            width: 460px;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            top: 34px;
+            right: 0;
+            transition: .2s;
+        }
+        &:hover {
+            color: c(text-bk);
+            background-color: c(main);
+        }
+        &:hover::after {
+            background-color: c(text-bk);
+        }
+    }
+}

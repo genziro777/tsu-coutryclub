@@ -1,0 +1,55 @@
+@use "setting" as *;
+
+// ペイジャー用の余白 ///////////////////////////////////////////////////
+$pn: 50px;
+$pn-sp: 7vw;
+
+.pagerWrap {
+    display: flex; //これがないとスクロールで全て表示されなくなる
+    overflow-x: auto;
+}
+.page_navi {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    li {
+        margin-right: 20px;
+        @media (max-width: $sp) {
+            margin-right: 4vw;
+        }
+
+        a {
+            width: $pn; //paddingでは数字が二桁になった時に崩れる
+            height: $pn; //paddingでは数字が二桁になった時に崩れる
+            background-color: #e0dddd;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: $sp) {
+                width: $pn-sp;
+                height: $pn-sp;
+                margin-right: 1vw;
+                font-size: 3vw;
+            }
+            &:hover {
+                opacity: 0.8; //このaタグに指定しないとcurrentのaタグも継承してしまう
+            }
+        }
+    }
+    li:last-child {
+        margin-right: 0; //最後の要素の余白をなくす
+    }
+    .current {
+        a {
+            color: #000;
+            background-color: red;
+            pointer-events: none;
+        }
+    }
+}

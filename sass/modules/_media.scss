@@ -1,0 +1,70 @@
+@use "setting" as *;
+
+// grid //////////////////////////////////////////////////////////////
+.media {
+    display: grid;
+    // grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding-bottom: vw(140);
+    background-color: c(main);
+    padding-left: vw(20);
+
+    @media (max-width: $sp) {
+        grid-template-columns: auto;
+    }
+    &::before {
+        position: absolute;
+        content: '';
+        width: vw(1);
+        height: vw(407.72);
+        background-color: #fff;
+        z-index: 2;
+        left: vw(17);
+        // top: vw(0);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+.media__body {
+    padding-left: vw(43);
+}
+
+.media__ttl {
+    font-size: vw(18);
+    font-weight: bold;
+    @include ls(400);
+    margin-bottom: vw(64);
+}
+.media__img {
+    width: vw(513);
+    height: vw(311);
+    margin: 0 0 0 auto;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.media__text {
+    font-size: vw(16);
+    @include ls(200);
+    margin-bottom: vw(35);
+}
+.media__num {
+    margin-bottom: vw(64);
+
+}
+
+.media__reverse {
+    .media__img {
+        order: 2;
+        @media (max-width: $sp) {
+            order: inherit;
+        }
+    }
+}
+.media__btn {
+    margin-top: vw(60);
+}
