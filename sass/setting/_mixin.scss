@@ -121,3 +121,16 @@
         border-color: #000 transparent transparent transparent;
     }
 }
+
+@mixin overlay($bgc: #001405, $opacity: 0.17) {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $bgc;
+        opacity: $opacity;
+    }
+}

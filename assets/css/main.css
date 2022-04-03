@@ -555,40 +555,51 @@ th {
 }
 
 .accordion {
-  width: 96%;
-  max-width: 900px;
   margin: 0 auto;
+  margin-bottom: 20.625vw;
   list-style: none;
 }
 
 .accordion__list {
-  margin: 10px 0;
+  margin-bottom: 5.46875vw;
 }
 
 .accordion__section {
-  border: 1px solid #ccc;
+  border-bottom: 0.15625vw solid #ccc;
 }
 
 .accordion__title {
   position: relative;
-  padding: 3% 3% 3% 50px;
-  font-weight: normal;
-  font-size: 16px;
-  font-size: 1rem;
+  padding: 3% 3% 2% 9%;
+  font-size: 3.125vw;
+  font-family: trajan-pro-3, serif;
+  letter-spacing: 0.4em;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 
+.accordion__title--ja,
+.accordion__text {
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
+
+.accordion__title--ja {
+  margin-left: 1em;
+}
+
 .accordion__title:before {
   position: absolute;
-  top: 50%;
-  right: 2%;
-  width: 0.786em;
-  height: 0.786em;
-  transform: translateY(-50%) rotate(135deg);
-  border: 0px;
-  border-top: solid 0.2em #000;
-  border-right: solid 0.2em #000;
+  top: 52%;
+  left: 4%;
+  width: 0;
+  height: 0;
+  transform: translateY(-50%) rotate(-90deg);
+  border-width: 1.09vw 1.09375vw 0 1.09375vw;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
   content: "";
   transition: 0.2s;
 }
@@ -1070,6 +1081,40 @@ th {
   margin-top: 9.375vw;
 }
 
+.pageVisual {
+  position: relative;
+  margin-bottom: 14.0625vw;
+}
+
+.pageVisual__img--pc {
+  width: 100%;
+  height: 58.28125vw;
+  background: url(../../assets/images/pageVisual-sp.jpg) center center/cover no-repeat;
+}
+
+.pageVisual__textWrap {
+  position: absolute;
+  top: 20%;
+  left: 0;
+}
+
+.pageVisual__text--en:before {
+  top: -17vw !important;
+  height: 33.8046875vw !important;
+}
+
+.conteTtl {
+  margin-bottom: 13.59375vw;
+  font-size: 3.125vw;
+  font-family: trajan-pro-3, serif;
+  letter-spacing: 0.4em;
+  text-align: center;
+}
+
+.facilities__post .post__figure {
+  margin-bottom: 5.78125vw;
+}
+
 .postContainer {
   background-color: #6f7d6d;
   color: #fff;
@@ -1397,6 +1442,66 @@ table:not(.lv2-table) {
 
 .area {
   background-color: rgba(212, 221, 228, 0.5);
+}
+
+.thumbnail {
+  width: 94.53125vw;
+  margin: 0 auto;
+}
+
+.thumbnail__list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  row-gap: 6.5625vw;
+  justify-content: space-between;
+}
+
+.thumbnail__item {
+  position: relative;
+  width: 44.375vw;
+  height: 27.96875vw;
+}
+
+.thumbnail__link:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #001405;
+  content: "";
+  opacity: 0.17;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=17)";
+}
+.thumbnail__link img {
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail__ttl--wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.thumbnail__ttl--en {
+  font-size: 2.34375vw;
+  font-family: trajan-pro-3, serif;
+  letter-spacing: 0.4em;
+}
+
+.thumbnail__ttl--ja {
+  font-weight: bold;
+  font-size: 1.5625vw;
+  letter-spacing: 0.1em;
+}
+
+.facilities__btn {
+  margin-top: 16.875vw;
+  margin-bottom: 8.59375vw;
 }
 
 .btn {

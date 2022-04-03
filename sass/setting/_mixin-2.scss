@@ -4,18 +4,6 @@
 
 //============ オーバーレイ（z-indexを変数で入れても良いかも）使い場所：imgでも良いし、imgのwrap要素でも良い ===============*/
 
-@mixin overlay($bgc: #000, $opacity: 0.5) {
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: $bgc;
-        opacity: $opacity;
-    }
-}
 
 //============ オーバーレイ（擬似要素を未使用のパターン） ===============*/
 //============ <div class="overlay-txt">オーバーレイテキスト</div>などのところに使用する ===============*/

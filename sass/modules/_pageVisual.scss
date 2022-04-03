@@ -1,0 +1,35 @@
+@use "setting" as *;
+
+.pageVisual {
+    position: relative;
+    margin-bottom: vw(90);
+}
+.pageVisual__img--pc {
+    background: url(./../../assets/images/pageVisual-sp.jpg) center center /
+        cover no-repeat;
+    width: 100%;
+    height: vw(373);
+}
+.pageVisual__textWrap {
+    position: absolute;
+    top: 20%;
+    left: 0;
+}
+.pageVisual__text--en {
+    &::before {
+        top: -17vw !important;
+        height: vw(216.35) !important;
+    }
+}
+.conteTtl {
+    font-size: vw(20);
+    @include ls(400);
+    font-family: ff(en);
+    text-align: center;
+    margin-bottom: vw(87);
+}
+.facilities__post {
+    .post__figure {
+        margin-bottom: vw(37);
+    }
+}

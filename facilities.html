@@ -80,7 +80,9 @@
                 </p>
             </nav>
             <nav class="globalNav-2">
-                <p class="siteLogo2"><img src="./assets/images/siteLogo2.png" alt=""></p>
+                <p class="siteLogo2">
+                    <img src="./assets/images/siteLogo2.png" alt="" />
+                </p>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#">宿泊</a>
@@ -100,12 +102,25 @@
 
         <main>
             <h3 class="brandLogo">TSU COUNTRY CLUB</h3>
-            <h2 class="pageTtl__en">NEWS</h2>
-            <h1 class="pageTtl__ja">記事一覧</h1>
+
+            <section class="pageVisual">
+                <div class="pageVisual__inner">
+                    <div class="pageVisual__img--pc"></div>
+                    <div class="pageVisual__textWrap">
+                        <h2 class="pageTtl__en pageVisual__text--en">
+                            Facilities
+                        </h2>
+                        <h1 class="pageTtl__ja pageVisual__text--ja">
+                            設備案内
+                        </h1>
+                    </div>
+                </div>
+            </section>
+            <h2 class="conteTtl">KATADA Lodge & Villa</h2>
 
             <div class="postsWrap">
                 <ul class="posts">
-                    <li class="posts__item post">
+                    <li class="posts__item post facilities__post">
                         <figure class="post__figure">
                             <img
                                 src="./assets/images/loge-villa.jpg"
@@ -116,126 +131,162 @@
                             />
                         </figure>
                         <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
                             <p class="post__excerpt">
                                 ここにテキストここにテキストここにテキストここにテキストここに
                                 テキストここにテキストここにテキストここに
                                 ここにテキストここにテキストここにテキストここにテキストここに
                                 テキストここにテキストここにテキストここに
                             </p>
-                            <a class="post__link" href="#">View more　</a>
-                        </div>
-                    </li>
-                    <li class="posts__item post">
-                        <figure class="post__figure">
-                            <img
-                                src="./assets/images/loge-villa.jpg"
-                                width="538"
-                                height="282"
-                                alt=""
-                                class="post__img"
-                            />
-                        </figure>
-                        <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
-                            <p class="post__excerpt">
-                                ここにテキストここにテキストここにテキストここにテキストここに
-                                テキストここにテキストここにテキストここに
-                            </p>
-                            <a class="post__link" href="#">View more　</a>
-                        </div>
-                    </li>
-                    <li class="posts__item post">
-                        <figure class="post__figure">
-                            <img
-                                src="./assets/images/loge-villa.jpg"
-                                width="538"
-                                height="282"
-                                alt=""
-                                class="post__img"
-                            />
-                        </figure>
-                        <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
-                            <p class="post__excerpt">
-                                ここにテキストここにテキストここにテキストここにテキストここに
-                                テキストここにテキストここにテキストここに
-                            </p>
-                            <a class="post__link" href="#">View more　</a>
-                        </div>
-                    </li>
-                    <li class="posts__item post">
-                        <figure class="post__figure">
-                            <img
-                                src="./assets/images/loge-villa.jpg"
-                                width="538"
-                                height="282"
-                                alt=""
-                                class="post__img"
-                            />
-                        </figure>
-                        <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
-                            <p class="post__excerpt">
-                                ここにテキストここにテキストここにテキストここにテキストここに
-                                テキストここにテキストここにテキストここに
-                            </p>
-                            <a class="post__link" href="#">View more　</a>
-                        </div>
-                    </li>
-                    <li class="posts__item post">
-                        <figure class="post__figure">
-                            <img
-                                src="./assets/images/loge-villa.jpg"
-                                width="538"
-                                height="282"
-                                alt=""
-                                class="post__img"
-                            />
-                        </figure>
-                        <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
-                            <p class="post__excerpt">
-                                ここにテキストここにテキストここにテキストここにテキストここに
-                                テキストここにテキストここにテキストここに
-                            </p>
-                            <a class="post__link" href="#">View more　</a>
-                        </div>
-                    </li>
-                    <li class="posts__item post">
-                        <figure class="post__figure">
-                            <img
-                                src="./assets/images/loge-villa.jpg"
-                                width="538"
-                                height="282"
-                                alt=""
-                                class="post__img"
-                            />
-                        </figure>
-                        <div class="post__body">
-                            <time class="post__date" datetime="2021-00-00"
-                                >21/00/00<span class="post__week">MON</span></time
-                            >
-                            <p class="post__excerpt">
-                                ここにテキストここにテキストここにテキストここにテキストここに
-                                テキストここにテキストここにテキストここに
-                            </p>
-                            <a class="post__link" href="#">View more　</a>
                         </div>
                     </li>
                 </ul>
-                <a href="" class="btn posts__btn">コースガイドはこちら</a>
+                <ul class="accordion">
+                    <li class="accordion__list">
+                        <section class="accordion__section">
+                            <h3 class="accordion__title">
+                                ROOM<span class="accordion__title--ja"
+                                    >お部屋のご案内</span
+                                >
+                            </h3>
+                            <div class="accordion__box">
+                                <p class="accordion__text">
+                                    ここにテキストここにテキストここにテキストここにテキストここに
+                                    テキストここにテキストここにテキストここにテキストここにテキス
+                                    トここにテここにテキストここにテキストここにテキストここにテキ
+                                    トここにテキストここにテキストここにテキストここにテキストここ
+                                </p>
+                            </div>
+                        </section>
+                    </li>
+
+                    <li class="accordion__list">
+                        <section class="accordion__section">
+                            <h3 class="accordion__title">
+                                Bathroom<span class="accordion__title--ja"
+                                    >入浴場のご案内</span
+                                >
+                            </h3>
+                            <div class="accordion__box">
+                                <p class="accordion__text">
+                                    ここにテキストここにテキストここにテキストここにテキストここに
+                                    テキストここにテキストここにテキストここにテキストここにテキス
+                                    トここにテここにテキストここにテキストここにテキストここにテキ
+                                    トここにテキストここにテキストここにテキストここにテキストここ
+                                </p>
+                            </div>
+                        </section>
+                    </li>
+                </ul>
             </div>
+
+                <section class="thumbnail">
+                    <ul class="thumbnail__list">
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                    src="./assets/images/loge-villa.jpg"
+                                    width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">club house</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        クラブハウス
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                src="./assets/images/loge-villa.jpg"
+                                width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">restaurant</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        レストラン
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                src="./assets/images/loge-villa.jpg"
+                                width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">Lounge</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        ラウンジ「フォンテンブロウ」
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                src="./assets/images/loge-villa.jpg"
+                                width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">Big bath</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        大浴場
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                src="./assets/images/loge-villa.jpg"
+                                width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">VIP room</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        貴賓室「初紅葉」
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="thumbnail__item">
+                            <a href="" class="thumbnail__link">
+                                <img
+                                src="./assets/images/loge-villa.jpg"
+                                width="284"
+                                    height="179"
+                                    alt="クラブハウスのサムネイルリンク"
+                                />
+
+                                <div class="thumbnail__ttl--wrap">
+                                    <p class="thumbnail__ttl--en">Golf course</p>
+                                    <p class="thumbnail__ttl--ja">
+                                        ゴルフコース
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <a href="" class="btn posts__btn facilities__btn">コースガイドはこちら</a>
         </main>
 
         <footer id="footer">
