@@ -15,6 +15,18 @@ $(".slider-1").slick({
     dots: true,//下部ドットナビゲーションの表示
 });
 
+/* =============== アコーディオン ============================== */
+$(".accordion__title").on("click", function () {
+    var findElm = $(this).next(".accordion__box") 
+    $(findElm).slideToggle() 
+
+    if ($(this).hasClass("close")) {
+        $(this).removeClass("close") 
+    } else {
+        $(this).addClass("close") 
+    }
+})
+
 
 /* =============== スマホでhoverOff ==================================== */
 var touch =

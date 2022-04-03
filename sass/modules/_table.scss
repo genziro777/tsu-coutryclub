@@ -1,50 +1,46 @@
 @use "setting" as *;
 
 .table {
-    // 全テーブル共通のスタイル */
+    width: vw(566);
     border-collapse: collapse;
-    text-align: left;
-}
-tr {
-    vertical-align: top;
-}
-th {
-    border-bottom: 1px solid #b6bbc0;
-    padding: 10px 0;
-    padding-left: 10px;
-    width: 30%;
-}
-td {
-    border-bottom: 1px solid #b6bbc0;
-    padding: 10px 0;
-    padding-left: 20px;
-    width: 70%;
-}
+    margin: 0 auto;
+    margin-bottom: vw(39);
 
-table:not(.lv2-table) {
-    // td内テーブル以外のテーブルのスタイル */
-    width: 800px;
-}
+    font-size: vw(15);
+    @include ls(400);
 
-.lv2-table {
-    margin-left: 10px;
-    width: 100%;
-}
-.lv2-table > tbody > tr > th {
-    border-bottom: none;
-    width: auto;
-}
-.lv2-table > tbody > tr > td {
-    border-bottom: none;
-    padding-left: 10px;
-    width: auto;
-}
+    // display: block;
+    // overflow-x: scroll;
+    // white-space: nowrap;
 
-.td-has-table {
-    // tableを子要素に持つtdのpaddingを除去 */
-    padding: 0;
-}
 
-.area {
-    background-color: rgba(212, 221, 228, 0.5);
 }
+tbody,td,th {
+    border: vw(1) solid #fff;
+    width: vw(566);
+}
+.table th,
+.table td {
+    text-align: center;
+    width: 20%;
+    min-width: 130px;
+    padding: vw(8);
+}
+.table__bgc {
+    background-color: c(sub);
+    color: c(text-bk);
+}
+.table__ttl {
+    margin-bottom: vw(16);
+}
+.bd-none {
+    border: 0px none;
+}
+// @media not all and (max-width: $pc){
+//     .table {
+//         display: block;
+//         overflow-x: scroll;
+//         white-space: nowrap;
+//     }
+
+// }

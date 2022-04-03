@@ -8,7 +8,9 @@
     width: vw(538);
     margin: 0 auto;
     @media not all and (max-width: $pc) {
-        width: 850px;
+        max-width: 850px;
+        width: 100%;
+        padding: 0 20px;
         // margin-left: 150px;
     }
 }
@@ -53,8 +55,6 @@
         padding-top: 166px;
         padding-left: 5px;
         width:850px;
-        // margin-left: 147px;
-        // margin-bottom: 16px;
         margin: 0 auto 16px;
     }
 }
@@ -67,8 +67,6 @@
         font-size: 20px;
         padding-left: 0px;
         width:850px;
-        // margin-left: 150px;
-        // margin-bottom: 95px;
         margin: 0 auto 95px;
 
     }
@@ -99,7 +97,7 @@
 .post__body {
     @media not all and (max-width: $pc) {
         width: 332px;
-        height: 282px;
+        height: auto;
     }
 }
 .post__date {

@@ -1,0 +1,114 @@
+@use "setting" as *;
+
+.faci-postsWrap {
+    width: vw(541);
+    margin: 0 auto;
+    @media not all and (max-width: $pc) {
+        width: 100%;
+        max-width: 940px;
+        padding: 0 20px;
+    }
+}
+.faci-posts__item {
+    margin-bottom: 22vw;
+    @media not all and (max-width: $pc){
+        margin-bottom: 0;
+    }
+}
+
+
+.faci-post__figure {
+    width: vw(538);
+    height: vw(282);
+    margin-bottom: 5.2vw;    
+    @media not all and (max-width: $pc) {
+        width: 100%;
+        height: 470px;
+        margin-bottom: 48px;
+    }
+}
+.faci-post__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.faci-post__body {
+    @media not all and (max-width: $pc) {
+        width: 100%;
+    }
+}
+.faci-post__excerpt {
+    font-size: vw(16);
+    font-weight: bold;
+    @include ls(100);
+    @include lh(16,24);
+    margin-bottom: 4.6vw;
+    text-align: justify;
+    @media not all and (max-width: $pc) {
+        font-size: 16px;
+        @include ls(100);
+        width: 738px;
+        margin: 0 auto 92px;
+    }
+}
+// .faci-post__link {
+//     font-size: vw(16);
+//     font-weight: bold;
+//     display: block;
+//     text-align: right;
+//     @include ls(100);
+//     position: relative;
+//     width: vw(242);
+//     margin: 0 0 0 auto;
+//     transition: .2s;
+//     &::before {
+//         content: "";
+//         position: absolute;
+//         top: 1.2vw;
+//         left: 18.5vw;
+//         transform: translateX(-50%) rotate(-90deg);
+//         @include san;
+//         transition: 0.2s;
+//         @media not all and (max-width: $pc) {
+//             @include san-pc;
+//             left: 117px;
+//             top: 50%;
+//             transform: translate(-50%, -50%) rotate(-90deg);
+//         }
+//     }
+//     &::after {
+//         position: absolute;
+//         content: "";
+//         width: vw(242);
+//         height: vw(1);
+//         background-color: #fff;
+//         right: 0;
+//         bottom: -1vw;
+//         margin-top: vw(20);
+//         transition: 0.2s;
+
+//         @media not all and (max-width: $pc) {
+//             width: 100%;
+//             height: 1px;
+//             bottom: -5px;
+//             margin-top: 0;
+//         }
+//     }
+//     @media not all and (max-width: $pc) {
+//         font-size: 16px;
+//         margin-bottom: 0;
+//         width: 242px;
+//         &:hover::after {
+//             background-color: c(text-bk);
+//         }
+//         &:hover::before {
+//             @include san-pc-hover;
+//         }
+//         &:hover {
+//             color: c(text-bk);
+//         }
+//     }
+//     a {
+//         transition: 0.2s;
+//     }
+// }

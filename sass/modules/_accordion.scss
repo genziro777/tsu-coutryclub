@@ -5,13 +5,25 @@
     list-style: none;
     margin: 0 auto;
     margin-bottom: vw(132);
+    @media not all and (max-width: $pc){
+        margin-bottom: 131px;
+        width: 850px;
+        margin: 0 0 0 auto;
+    }
 }
 .accordion__list {
-    margin-bottom: vw(35);
+    margin-bottom: 1.6vw;
+    @media not all and (max-width: $pc){
+        margin-bottom: 0;
+    }
 }
 
 .accordion__section {
     border-bottom: vw(1) solid #ccc;
+    @media not all and (max-width: $pc){
+        border-bottom: 1px solid #ccc;
+
+    }
 }
 .accordion__title {
     position: relative; //+マークの位置基準とするためrelative指定*/
@@ -19,8 +31,13 @@
     font-family: ff(en);
     font-size: vw(20);
     @include ls(400);
-    padding: 3% 3% 2% 9%;
+    padding: 3% 3% 0.8% 7.6%;
     transition: all 0.5s ease;
+    @media not all and (max-width: $pc){
+        @include rem(20);
+        padding: 3% 3% 0.6% 5%;
+
+    }
 }
 .accordion__title--ja,
 .accordion__text {
@@ -28,30 +45,47 @@
     font-weight: bold;
     @include ls(100);
     @include lh(16,24);
+    @media not all and (max-width: $pc){
+        @include rem(16);
+    }
 }
 .accordion__title--ja {
-    margin-left: 1em;
+    margin-left: 1.4vw;
+    @media not all and (max-width: $pc){
+        margin-left: 9px;
+    }
 }
 
 //アイコンの矢じるし*/
 .accordion__title::before {
     content: "";
     position: absolute;
-    top: 52%;
-    left: 4%;
+    top: 60.5%;
+    left: 2.5%;
     transform: translateY(-50%) rotate(-90deg);
     transition: 0.2s;
     @include san;
+    @media not all and (max-width: $pc){
+        @include san-pc;
+        top: 65.5%;
+        left: 2%;
+    }
 }
 //　closeというクラスがついたら形状変化　*/
 .accordion__title.close::before {
-    transform: rotate(-45deg);
+    transform: rotate(0deg);
 }
 
 //アコーディオンで現れるエリア*/
 .accordion__box {
     display: none; //はじめは非表示*/
-    background: #f3f3f3;
-    margin: 0 3% 3% 3%;
-    padding: 3%;
+    margin-bottom: 3.4vw;
+    margin-top: 2vw;
+    text-align: justify;
+    @media not all and (max-width: $pc){
+        padding: 0 50px 10px 30px;
+        margin-top: 10px;
+        margin-bottom: -2px;
+
+    }
 }

@@ -2,23 +2,91 @@
 
 .pageVisual {
     position: relative;
-    margin-bottom: vw(90);
+    margin-bottom: 13vw;
+    @media not all and (max-width: $pc){
+        margin-bottom: 102px;
+    }
 }
-.pageVisual__img--pc {
+.pageVisual__inner {
+    @media not all and (max-width: $pc){
+        padding-top: 71px;
+
+    }
+}
+.pageVisual__img--sp {
     background: url(./../../assets/images/pageVisual-sp.jpg) center center /
         cover no-repeat;
     width: 100%;
     height: vw(373);
+    @media not all and (max-width: $pc) {
+        display: none;
+    }
+}
+.pageVisual__img--pc {
+    display: none;
+    @media not all and (max-width: $pc) {
+        display: block;
+        background: url(./../../assets/images/pageVisual-pc.jpg) center center /
+            cover no-repeat;
+        width: 100%;
+        height: 373px;
+    }
 }
 .pageVisual__textWrap {
     position: absolute;
-    top: 20%;
+    top: 26.4%;
     left: 0;
+    @media not all and (max-width: $pc){
+        max-width: 1060px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 80px;
+    }
 }
 .pageVisual__text--en {
+    font-family: ff(en);
+    font-size: vw(23);
+    @include ls(400);
+    padding-left: 10.5vw;
+    margin-bottom: 2vw;
+    position: relative;
+
     &::before {
-        top: -17vw !important;
-        height: vw(216.35) !important;
+        content: "";
+        position: absolute;
+        width: vw(1);
+        background-color: #fff;
+        left: 6.3vw;
+
+        top: -17.4vw;
+        height: vw(216.35);
+        @media not all and (max-width: $pc){
+            height: 407.72px;
+            width: 1px;
+            top: 44px;
+            left: -36px;
+        }
+    }
+    @media not all and (max-width: $pc){
+        @include rem(20);
+        padding-top: 71px;
+        padding-left: 35px;
+        width:900px;
+        margin: 0 auto 19px;
+    }
+}
+.pageVisual__text--ja {
+    font-size: vw(19);
+    @include ls(400);
+    padding-left: 7.8vw;
+    margin-bottom: 12vw;
+
+    @media not all and (max-width: $pc){
+        font-size: 14px;
+        width: 900px;
+        padding-left: 0px;
+        margin: 0 auto 95px;
     }
 }
 .conteTtl {
@@ -26,10 +94,9 @@
     @include ls(400);
     font-family: ff(en);
     text-align: center;
-    margin-bottom: vw(87);
-}
-.facilities__post {
-    .post__figure {
-        margin-bottom: vw(37);
+    margin-bottom: 13vw;
+    @media not all and (max-width: $pc){
+        @include rem(22);
+        margin-bottom: 87px;
     }
 }
