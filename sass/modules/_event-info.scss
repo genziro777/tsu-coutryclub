@@ -1,11 +1,12 @@
 @use "setting" as *;
 
 .eventInfo {
-    padding-bottom: vw(90);
+    padding-bottom: 12.5vw;
     background-color: c(main);
     padding-left: vw(20);
     @media not all and (max-width: $pc){
         text-align: center;
+        padding-bottom: 172px;
     }
 
 }

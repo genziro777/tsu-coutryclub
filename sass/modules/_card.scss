@@ -5,7 +5,7 @@
     text-decoration: none;
     color: inherit;
     box-sizing: border-box;
-    margin-bottom: vw(80);
+    margin-bottom: 10.3vw;
     @media not all and (max-width: $pc) {
         display: grid;
         grid-template-areas: "a" "b" "c";
@@ -15,17 +15,17 @@
 .card__ttl {
     font-size: vw(16);
     @include ls(200);
-    margin-bottom: vw(20);
+    margin-bottom: 2.5vw;
     @media not all and (max-width: $pc) {
         font-size: 16px;
-        margin-bottom: 24px;
+        margin-bottom: 15px;
         grid-area: a;
         min-height: 32px;
     }
 }
 .card__figure {
     text-align: center;
-    margin-bottom: vw(20);
+    margin-bottom: 2.4vw;
     width: vw(291);
     height: vw(183);
 
@@ -58,7 +58,7 @@
         transition: .2s;
         @media not all and (max-width: $pc) {
             @include san-pc;
-            left: 135px;
+            left: 122px;
             top: 50%;
             transform: translate(-50%, -50%) rotate(-90deg);
         }
@@ -70,19 +70,20 @@
         height: vw(1);
         background-color: #fff;
         right: 0;
-        bottom: 0;
-        margin-top: vw(20);
+        bottom: -.6vw;
         transition: 0.2s;
 
         @media not all and (max-width: $pc) {
             width: 100%;
             height: 1px;
+            bottom: -6px;
         }
     }
     @media not all and (max-width: $pc) {
         font-size: 16px;
+        padding-right: 15px;
         grid-area: b;
-        margin-bottom: 24px;
+        margin-bottom: 30px;
         &:hover::after {
             background-color: c(text-bk);
         }

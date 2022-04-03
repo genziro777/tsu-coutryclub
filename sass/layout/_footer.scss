@@ -6,11 +6,11 @@
     display: grid;
     place-items: center;
     @media not all and (max-width: $pc) {
-        padding-top: 57px;
+        padding-top: 67px;
         display: block;
         height: 209px;
         text-align: center;
-        background-color: #cfc;
+        background-color: #fff;
     }
 }
 .footerNav {
@@ -26,12 +26,38 @@
                 auto
             ); // auto=コンテンツ幅にしてくれる。1fr=5つとも同じ幅になる。
             justify-content: space-between;
-            width: 959px;
+            max-width: 979px;
             font-size: 12px;
             font-family: NotoSans;
             color: #363636;
             @include ls(50);
-            margin: 0 auto 19px;
+            margin: 0 auto 8px;
+            padding: 0 10px;
+        }
+        &__item {
+            ////// ホバー設定 //////
+            a {
+                position: relative;
+            }
+            a::after {
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+
+                width: 100%;
+                height: 1px;
+
+                content: "";
+                transition: transform 0.2s;
+                transform: scale(0, 1);
+                transform-origin: left top;
+
+                background: c(text-bk);
+            }
+            a:hover::after {
+                transform: scale(1, 1);
+            }
+            ////// ホバー設定 //////
         }
     }
 }
@@ -47,8 +73,11 @@
 .sns {
     display: none;
     @media not all and (max-width: $pc) {
-        display: block;
-        margin-bottom: 31px;
-
+        display: inline-block;
+        margin-bottom: 24px;
+        transition: .2s;
+        &:hover {
+            opacity: 0.7;
+        }
     }
 }
