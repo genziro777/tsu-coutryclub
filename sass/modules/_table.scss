@@ -1,37 +1,108 @@
 @use "setting" as *;
 
+.table-grid {
+    @media not all and (max-width: $pc) {
+        display: grid;
+        grid-template-columns: repeat(2, 438px);
+        justify-content: space-between;
+        max-width: 940px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+        grid-auto-flow: dense;
+    }
+}
+.order1 {
+    @media not all and (max-width: $pc){
+        order: 1;
+    }
+}
+.order2 {
+    @media not all and (max-width: $pc){
+        order: 2;
+    }
+}
+.order3 {
+    @media not all and (max-width: $pc){
+        order: 3;
+    }
+}
+.order4 {
+    @media not all and (max-width: $pc){
+        order: 4;
+    }
+}
+.order5 {
+    @media not all and (max-width: $pc){
+        order: 5;
+    }
+}
+.order6 {
+    @media not all and (max-width: $pc){
+        order: 6;
+    }
+}
+.order7 {
+    @media not all and (max-width: $pc){
+        order: 7;
+    }
+}
+.order8 {
+    @media not all and (max-width: $pc){
+        order: 8;
+    }
+}
+.order9 {
+    @media not all and (max-width: $pc){
+        order: 9;
+    }
+}
 .table {
     width: vw(566);
     border-collapse: collapse;
     margin: 0 auto;
-    margin-bottom: vw(39);
-
-    font-size: vw(15);
-    @include ls(400);
-
+    margin-bottom: 5.4vw;
     // display: block;
     // overflow-x: scroll;
     // white-space: nowrap;
-
-
+    @media not all and (max-width: $pc) {
+        width: 438px;
+        margin-bottom: 55px;
+    }
 }
-tbody,td,th {
+tbody,
+td,
+th {
     border: vw(1) solid #fff;
     width: vw(566);
+    @media not all and (max-width: $pc) {
+        width: 438px;
+        border: 1px solid #fff;
+
+    }
 }
 .table th,
 .table td {
     text-align: center;
     width: 20%;
-    min-width: 130px;
-    padding: vw(8);
+    padding: .85vw;
+    vertical-align: middle;
+    @media not all and (max-width: $pc){
+        padding: 8.7px 0;
+    }
 }
 .table__bgc {
     background-color: c(sub);
     color: c(text-bk);
 }
 .table__ttl {
-    margin-bottom: vw(16);
+    margin-bottom: 1.7vw;
+    @include ls(400);
+    font-size: vw(15);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+        margin-bottom: 18px;
+    }
 }
 .bd-none {
     border: 0px none;
@@ -44,3 +115,181 @@ tbody,td,th {
 //     }
 
 // }
+.center {
+    vertical-align: middle;
+}
+.text-13 {
+    font-size: vw(13);
+    @include ls(180);
+    line-height: 1.5 !important;
+    display: inline-block;
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+        @include ls(100);
+
+    }
+}
+.lh {
+    @media not all and (max-width: $pc){
+        line-height: 3 !important;
+    }
+}
+.text-14 {
+    font-size: vw(14);
+    @include ls(200);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+    }
+}
+.text-14-100 {
+    font-size: vw(14);
+    @include ls(100);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+    }
+}
+.text-15-400 {
+    font-size: vw(15);
+    @include ls(400);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+    }
+}
+.text-15-200 {
+    font-size: vw(15);
+    @include ls(200);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+    }
+}
+.text-16 {
+    font-size: vw(16);
+    @include ls(400);
+    @media not all and (max-width: $pc) {
+        @include rem(11);
+    }
+}
+.longBox {
+    width: 66.8% !important;
+    line-height: 2;
+}
+.longBox2 {
+    line-height: 3;
+}
+.shortBox {
+    width: 33.2% !important;
+}
+.m0 {
+    margin-bottom: vw(1);
+    @media not all and (max-width: $pc){
+        margin-bottom: 1px;
+    }
+}
+.table__note--wrap {
+    @media not all and (max-width: $pc){
+        margin-top: -101px;
+    }
+}
+.table__note {
+    width: vw(566);
+    margin: 0 auto 1vw;
+    font-size: vw(16);
+    @include ls(400);
+    @media not all and (max-width: $pc){
+        width: 900px;
+        @include rem(14);
+        margin-bottom: 3px;
+    }
+}
+.res-price__btn--wrap {
+    @media not all and (max-width: $pc){
+        display: flex;
+        width: 770px;
+        justify-content: space-between;
+        margin: 185px auto 111px;
+    }
+}
+.res-price__btn1,
+.res-price__btn2 {
+    margin: 0 auto;
+}
+.res-price__btn1 {
+    margin-bottom: 8.1vw;
+    margin-top: 15.5vw;
+    @media not all and (max-width: $pc){
+        margin: 0;
+    }
+}
+.res-price__btn2 {
+    margin-bottom: 10.8vw;
+    @media not all and (max-width: $pc){
+        margin: 0;
+    }
+
+}
+.member {
+    text-align: center;
+    margin-bottom: 7.8vw;
+    font-size: vw(16);
+    @include ls(100);
+    font-weight: bold;
+    &:last-child {
+        margin-bottom: 5vw;
+    }
+
+    @media not all and (max-width: $pc){
+        @include rem(16);
+        margin-bottom: 50px;
+        &:last-child {
+            margin-bottom: 100px;
+        }
+    }
+    a {
+        position: relative;
+        transition: 0.2s;
+        display: inline-block;
+        &:hover {
+            color: c(text-bk);
+        }
+    }
+
+    ////// ホバー設定 //////
+    a::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        content: "";
+        transition: transform 0.2s;
+        transform: scale(0, 1);
+        transform-origin: left top;
+
+        background: c(text-bk);
+    }
+    a:hover::after {
+        transform: scale(1, 1);
+    }
+    ////// ホバー設定 //////
+
+}
+.h78 {
+    @media not all and (max-width: $pc){
+        height: 78px;
+
+    }
+}
+.mt1 {
+    @media not all and (max-width: $pc){
+        margin-top: -173px;
+        height: 143px;
+    }
+}
+.mt2 {
+    @media not all and (max-width: $pc){
+        margin-top: -295px;
+        height: 107px;
+    }
+}

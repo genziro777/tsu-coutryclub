@@ -1,0 +1,44 @@
+@use "setting" as *;
+
+/*ドットナビゲーションの設定*/
+.slider-3 {
+    .slick-dots {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        margin: vw(-50) 0 0 0;
+        top: -72vw;
+        @media not all and (max-width: $pc){
+            top: -688px;
+            margin: -50px 0 0 0;
+        }
+    }
+
+    .slick-dots li {
+        display: inline-block;
+        margin: 0;
+    }
+
+    .slick-dots li {
+        width: vw(47);
+        height: vw(5);
+        @media not all and (max-width: $pc){
+            width: 47px;
+            height: 5px;
+        }
+    }
+    .slick-dots li button:before {
+        content: '';
+        width: 100% ;
+        height: vw(1);
+        background: #fff;
+        opacity: 1;
+        @media not all and (max-width: $pc){
+            height: 1px;
+        }
+    }
+    .slick-dots li.slick-active button:before {
+        background: #041D00;
+    }
+
+}

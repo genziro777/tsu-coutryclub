@@ -19,9 +19,25 @@
         height: 373px;
     }
 }
+.reserve__subTtl {
+    margin-bottom: 10.7vw;
+    @media not all and (max-width: $pc) {
+        margin-bottom: 53px !important;
+    }
+}
+.price__subTtl {
+    margin-bottom: 10.7vw;
+    @media not all and (max-width: $pc) {
+        margin-bottom: 82px !important;
+    }
+}
 .pageNav {
     width: vw(317);
-    margin: 0 auto vw(88);
+    margin: 0 auto 15vw;
+    @media not all and (max-width: $pc) {
+        width: 314px;
+        margin-bottom: 94px;
+    }
 }
 .pageNav__list {
     display: flex;
@@ -32,6 +48,9 @@
     font-size: vw(16);
     font-weight: bold;
     @include ls(100);
+    @media not all and (max-width: $pc) {
+        @include rem(16);
+    }
     a {
         position: relative;
         transition: 0.2s;
@@ -61,17 +80,22 @@
         transform: scale(1, 1);
     }
     ////// ホバー設定 //////
-
 }
 .sectionHeading {
     text-align: center;
 }
 .iframe-plan {
     width: 88.5%;
-    aspect-ratio: 566/361;
-    margin-bottom: vw(112);
-    margin: 0 auto;
+    aspect-ratio: 566/551;
+    margin: 0 auto vw(112);
     overflow-x: scroll;
+    @media not all and (max-width: $pc) {
+        max-width: 920px;
+        width: 100%;
+        height: 574px;
+        padding: 0 20px;
+        margin-bottom: 159px;
+    }
     iframe {
         width: 150%;
         height: 100%;

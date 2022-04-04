@@ -22,7 +22,7 @@
         }
     }
     @media not all and (max-width: $pc){
-        font-size: 22px;
+        @include rem(22);
         @include ls(400);
     }
 }
@@ -30,7 +30,7 @@
     font-size: vw(14);
     @include ls(400);
     @media not all and (max-width: $pc){
-        font-size: 14px;
+        @include rem(14);
 
     }
 
@@ -40,7 +40,7 @@
     font-weight: bold;
     @include ls(400);
     @media not all and (max-width: $pc){
-        font-size: 18px;
+        @include rem(18);
         font-weight: bold;
     }
 

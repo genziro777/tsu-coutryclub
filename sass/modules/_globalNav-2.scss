@@ -66,3 +66,11 @@
         font-weight: normal;
     }
 }
+.pageLogo-pc {
+    @media not all and (max-width: $pc){
+        width: 217px;
+    }
+    img {
+        width: 100%;
+    }
+}

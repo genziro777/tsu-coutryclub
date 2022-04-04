@@ -23,9 +23,13 @@
 .brandLogo {
     text-align: center;
     padding-top: vw(40);
-    margin-bottom: 6.8vw;
+    width: vw(186);
+    margin: 0 auto 6.8vw;
     @media not all and (max-width: $pc) {
         display: none;
+    }
+    img {
+        width: 100%;
     }
 }
 .pageTtl__en {
@@ -51,7 +55,7 @@
         }
     }
     @media not all and (max-width: $pc) {
-        font-size: 32px;
+        @include rem(32);
         padding-top: 166px;
         padding-left: 5px;
         width:850px;
@@ -64,7 +68,7 @@
     padding-left: vw(66);
     margin-bottom: 12vw;
     @media not all and (max-width: $pc) {
-        font-size: 20px;
+        @include rem(20);
         padding-left: 0px;
         width:850px;
         margin: 0 auto 95px;
@@ -107,7 +111,7 @@
     margin-bottom: 2.7vw;
     display: block;
     @media not all and (max-width: $pc) {
-        font-size: 12px;
+        @include rem(12);
         margin-bottom: 26px;
     }
 }
@@ -124,7 +128,7 @@
     margin-bottom: 4.6vw;
     text-align: justify;
     @media not all and (max-width: $pc) {
-        font-size: 20px;
+        @include rem(20);
         @include ls(200);
         @include lh(20, 33);
         margin-bottom: 75px;
@@ -174,7 +178,7 @@
         }
     }
     @media not all and (max-width: $pc) {
-        font-size: 16px;
+        @include rem(16);
         margin-bottom: 0;
         width: 242px;
         &:hover::after {
