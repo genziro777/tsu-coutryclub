@@ -11,8 +11,10 @@
         grid-template-columns: repeat(
             2,
             auto
-        ); // auto=コンテンツ幅にしてくれる。1fr=5つとも同じ幅になる。
-
+        );
+    }
+    @media not all and (max-width: $lg){
+        padding: vw(19,1440) vw(41,1440) vw(0) vw(38,1440);
     }
     .menu {
         display: grid;
@@ -20,15 +22,20 @@
         grid-template-columns: repeat(
             4,
             auto
-        ); // auto=コンテンツ幅にしてくれる。1fr=5つとも同じ幅になる。
-        // gap: 42px;
+        ); 
         width: 443px;
+        @media not all and (max-width: $lg){
+            width: vw(443,1440);
+        }
         &__item {
-            font-size: 16px;
+            @include rem(16);
             font-weight: bold;
             @include ls(100);
             display: grid;
             place-items: center;
+            @media not all and (max-width: $lg){
+                font-size: vw(16,1440);
+            }
             a {
                 position: relative;
                 color: #fff;
@@ -54,6 +61,9 @@
                 transform-origin: left top;
 
                 background: c(text-bk);
+                @media not all and (max-width: $lg){
+                    height: vw(1,1440);
+                }
             }
             a:hover::after {
                 transform: scale(1, 1);
@@ -62,13 +72,19 @@
         }
     }
     .menu__item--s {
-        font-size: 12px;
+        @include rem(12);
         font-weight: normal;
+        @media not all and (max-width: $lg){
+            font-size: vw(12,1440);
+        }
     }
 }
 .pageLogo-pc {
     @media not all and (max-width: $pc){
         width: 217px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(217,1440);
     }
     img {
         width: 100%;

@@ -1,0 +1,169 @@
+@use "setting" as *;
+
+.slider-4 {
+    width: vw(512);
+    margin: 0 auto;
+    margin-bottom: 14.6vw !important;
+    @media not all and (max-width: $pc) {
+        width: 780px;
+        height: 502px;
+        margin-bottom: 116px !important;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(780, 1440);
+        height: vw(502, 1440);
+        margin-bottom: vw(116, 1440) !important;
+    }
+
+    .slick-current,
+    .is-active-next {
+        transform: scale(1);
+        opacity: 1;
+    }
+    //矢印設定 /////////////////////////////////////////////////
+
+    .slide-arrow {
+        background-color: transparent;
+        bottom: 0;
+        height: 0;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        width: 0;
+    }
+    .slick-prev {
+        border-bottom: vw(17) solid transparent;
+        border-left: 0;
+        border-right: vw(17) solid #fff;
+        border-top: vw(17) solid transparent;
+        left: -6.8vw;
+        top: 11vw;
+        @media not all and (max-width: $pc) {
+            border-bottom: 16px solid transparent;
+            border-left: 0;
+            border-right: 16px solid #fff;
+            border-top: 16px solid transparent;
+            left: -25px;
+            top: 56px;
+        }
+        @media not all and (max-width: $lg) {
+            border-bottom: vw(16, 1440) solid transparent;
+            border-left: 0;
+            border-right: vw(16, 1440) solid #fff;
+            border-top: vw(16, 1440) solid transparent;
+            left: vw(-25, 1440);
+            top: vw(56,1440);
+        }
+    }
+    .slick-next {
+        border-bottom: vw(17) solid transparent;
+        border-left: vw(17) solid #fff;
+        border-right: 0;
+        border-top: vw(17) solid transparent;
+        right: -7.7vw;
+        top: 11vw;
+        @media not all and (max-width: $pc) {
+            border-bottom: 16px solid transparent;
+            border-left: 16px solid #fff;
+            border-right: 0;
+            border-top: 16px solid transparent;
+            right: -25px;
+            top: 56px;
+        }
+        @media not all and (max-width: $lg) {
+            border-bottom: vw(16, 1440) solid transparent;
+            border-left: vw(16, 1440) solid #fff;
+            border-right: 0;
+            border-top: vw(16, 1440) solid transparent;
+            right: vw(-25, 1440);
+            top: vw(56,1440);
+        }
+    }
+    .slick-arrow:before {
+        //デフォルトの矢印を消す
+        content: "";
+    }
+    //矢印設定 ここまで/////////////////////////////////////////////////
+    //dots設定/////////////////////////////////////////////////
+
+    .slick-dots {
+        width: vw(470);
+        height: 17vw;
+        bottom: 92.2vw;
+        left: 3vw;
+        display: grid;
+        grid-template-columns: repeat(9,auto);
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 0 auto;
+        @media not all and (max-width: $pc){
+            bottom: 632px;
+            width: 700px;
+            height: 145px;
+            left: 35px;
+        }
+        @media not all and (max-width: $lg){
+            bottom: vw(632,1440);
+            width: vw(700,1440);
+            height: vw(145,1440);
+            left: vw(35,1440);
+        }
+
+        li button{
+            padding: 0;
+            font-size: vw(26);
+            font-family: ff(en);
+            @media not all and (max-width: $pc){
+                @include rem(36);
+                @include ls(200);
+                width: 100%;
+            }
+            @media not all and (max-width: $lg){
+                font-size: vw(36,1440);
+            }
+            &:hover {
+                color: c(text-bk);
+            }
+        }
+        li {
+            @media not all and (max-width: $pc){
+                width: 38px;
+                height: 34px;
+    
+            }
+            @media not all and (max-width: $lg){
+                width: vw(38,1440);
+                height: vw(34,1440);
+            }
+        }
+    }
+
+    .slick-dots li button{//ドットの不要なスタイルを外す。するともともと設定されている連番が出現
+        color: #fff;
+        background:initial;
+        transition: .2s;
+    }
+    .slick-dots li button:before{//ドットの不要なスタイルを外す。するともともと設定されている連番が出現
+        content:none;
+    }
+    //dots設定 ここまで/////////////////////////////////////////////////
+}
+.slider-4__item {
+    width: vw(244);
+    height: vw(502);
+    transition: 0.2s;
+    transform: scale(0.8);
+    opacity: 0.5;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    @media not all and (max-width: $pc) {
+        width: 244px !important;
+        height: 502px;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(244, 1440) !important;
+        height: vw(502, 1440);
+    }
+}

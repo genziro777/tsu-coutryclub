@@ -15,10 +15,12 @@
         background-color: #fff;
         z-index: 2;
         left: vw(-36);
-        top: vw(-50);
+        top: -4vw;
         @media not all and (max-width: $pc){
             width: 1px;
             height: 407.72px;
+            top: 8px;
+            left: -42px;
         }
     }
     @media not all and (max-width: $pc){

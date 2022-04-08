@@ -1,26 +1,54 @@
 @use "setting" as *;
 
 .about {
-    padding-top: vw(180);
+    padding-top: 24.4vw;
     padding-bottom: vw(128);
     background-color: c(main);
     padding-left: vw(20);
     @media not all and (max-width: $pc){
-        padding-top: 230px;
+        padding-top: 134px;
+        padding-bottom: 179px;
+    }
+    @media not all and (max-width: 1200px){
+        padding-top: vw(134,1200);
+        padding-bottom: vw(179,1200);
     }
 
 }
 .about__ttl {
     margin-left: vw(54);
-    margin-bottom: vw(30);
-    padding-top: vw(10);
+    margin-bottom: 2.7vw;
+    padding-top: 3.1vw;
     @media not all and (max-width: $pc){
-        margin-bottom: 25px;
+        margin-bottom: 18px;
         padding-top: 32px;
+        margin-left: 117px;
     }
+    @media not all and (max-width: 1200px){
+        font-size: vw(22,1200);
+        margin-bottom: vw(18,1200);
+        padding-top: vw(32,1200);
+        margin-left: vw(117,1200);
+        &::before {
+            width: vw(1,1200); 
+            height: vw(407.72,1200);
+            top: vw(8,1200);
+            left: (vw(-42,1200));
+        }
+    }
+
 }
 .about__subTtl {
     margin-left: vw(54);
-    margin-bottom: vw(30);
+    margin-bottom: 5vw;
+    @media not all and (max-width: $pc){
+        margin-left: 113px;
+        margin-bottom: 64px;
+    }
+    @media not all and (max-width: 1200px){
+        font-size: vw(14,1200);
+        margin-bottom: vw(64,1200);
+        margin-left: vw(113,1200);
+    }
 
 }

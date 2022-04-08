@@ -1,0 +1,26 @@
+@use "setting" as *;
+
+.courseNumber {
+    width: vw(460);
+    margin: 0 auto;
+    @media not all and (max-width: $pc){
+        width: 700px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(700,1440);
+    }
+}
+.courseNumber__hr {
+    border-top: 1px solid #fff;
+    margin-top: 21.4vw;
+    margin-bottom: 23vw;
+    @media not all and (max-width: $pc){
+        width: 693px;
+        margin: 181px auto 213px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(693,1440);
+        margin: vw(181,1440) auto vw(213,1440);
+
+    }
+}

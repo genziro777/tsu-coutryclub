@@ -12,6 +12,10 @@
         text-align: center;
         background-color: #fff;
     }
+    @media not all and (max-width: $lg){
+        padding-top: vw(67,1440);
+        height: vw(209,1440);
+    }
 }
 .footerNav {
     display: none;
@@ -34,6 +38,12 @@
             margin: 0 auto 8px;
             padding: 0 10px;
         }
+        @media not all and (max-width: $lg){
+            max-width: vw(979,1440);
+            font-size: vw(12,1440);
+            margin: 0 auto vw(8,1440) ;
+            padding: 0 vw(10,1440);
+        }
         &__item {
             ////// ホバー設定 //////
             a {
@@ -53,6 +63,10 @@
                 transform-origin: left top;
 
                 background: c(text-bk);
+                @media not all and (max-width: $lg){
+                    height: vw(1,1440);
+                    bottom: vw(-2,1440);
+                }
             }
             a:hover::after {
                 transform: scale(1, 1);
@@ -69,6 +83,9 @@
     @media not all and (max-width: $pc) {
         font-size: 12px;
     }
+    @media not all and (max-width: $lg){
+        font-size: vw(12,1440);
+    }
 }
 .sns {
     display: none;
@@ -79,5 +96,8 @@
         &:hover {
             opacity: 0.7;
         }
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(24,1440);
     }
 }

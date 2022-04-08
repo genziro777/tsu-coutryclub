@@ -6,18 +6,26 @@
     @media not all and (max-width: $pc){
         margin-bottom: 102px;
     }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(102,1440);
+    }
 }
 .pageVisual--res-price {
     margin-bottom: 8vw;
     @media not all and (max-width: $pc){
         margin-bottom: 65px;
     }
-
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(65,1440);
+    }
 }
 .pageVisual__inner {
     @media not all and (max-width: $pc){
         padding-top: 71px;
 
+    }
+    @media not all and (max-width: $lg){
+        padding-top: vw(71,1440);
     }
 }
 .pageVisual__img--sp {
@@ -38,6 +46,9 @@
         width: 100%;
         height: 373px;
     }
+    @media not all and (max-width: $lg){
+        height: vw(373,1440);
+    }
 }
 .pageVisual__textWrap {
     position: absolute;
@@ -50,12 +61,16 @@
         transform: translateX(-50%);
         padding: 0 80px;
     }
+    @media not all and (max-width: $lg){
+        padding: vw(0) vw(80,1440);
+        max-width: vw(1060,1440);
+    }
 }
 .pageVisual__text--en {
     font-family: ff(en);
     font-size: vw(23);
     @include ls(400);
-    padding-left: 10.5vw;
+    padding-left: 9vw;
     margin-bottom: 2vw;
     position: relative;
 
@@ -74,19 +89,31 @@
             top: 44px;
             left: -36px;
         }
+        @media not all and (max-width: $lg){
+            height: vw(407.72,1440);
+            width: vw(1,1440);
+            top: vw(44,1440);
+            left: vw(-36,1440);
+        }
     }
     @media not all and (max-width: $pc){
         @include rem(20);
         padding-top: 71px;
-        padding-left: 35px;
+        padding-left: 0;
         width:900px;
         margin: 0 auto 19px;
+    }
+    @media not all and (max-width: $lg){
+        padding-top: vw(71,1440);
+        width: vw(900,1440);
+        margin: 0 auto vw(19,1440);
+        font-size: vw(20,1440);
     }
 }
 .pageVisual__text--ja {
     font-size: vw(19);
     @include ls(400);
-    padding-left: 7.8vw;
+    padding-left: 9vw;
     margin-bottom: 12vw;
 
     @media not all and (max-width: $pc){
@@ -94,6 +121,11 @@
         width: 900px;
         padding-left: 0px;
         margin: 0 auto 95px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(900,1440);
+        margin: 0 auto vw(95,1440);
+        font-size: vw(14,1440);
     }
 }
 .conteTtl {
@@ -105,5 +137,9 @@
     @media not all and (max-width: $pc){
         @include rem(22);
         margin-bottom: 87px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(22,1440);
+        margin-bottom: vw(87,1440);
     }
 }

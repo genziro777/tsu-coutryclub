@@ -11,16 +11,23 @@
     place-items: center;
     border: 1px solid #fff;
     transition: 0.2s;
+    @include ls(100);
     &:focus,
     &:hover {
         background-color: #fff;
         color: c(main);
     }
     @media not all and (max-width: $pc) {
-        font-size: 16px;
+        @include rem(16);
         font-weight: bold;
         width: 223px;
         height: 34px;
+    }
+    @media not all and (max-width: $lg) {
+        font-size: vw(16, 1440);
+        width: vw(223, 1440);
+        height: vw(34, 1440);
+
     }
 }
 .btn--wh {
@@ -36,5 +43,33 @@
     }
     @media not all and (max-width: $pc) {
         display: none;
+    }
+}
+.btn--l {
+    color: #fff;
+    width: vw(474);
+    height: vw(72);
+    font-size: vw(34);
+    @include ls(100);
+    margin-top: 4vw;
+    margin-bottom: 20.7vw;
+}
+.btn--vw {
+    display: none;
+    @media not all and (max-width: $pc) {
+        display: grid;
+        place-items: center;
+        @include rem(16);
+        font-weight: bold;
+        width: 223px;
+        height: 34px;
+    }
+
+    @media not all and (max-width: 1200px) {
+        font-size: vw(16, 1200);
+        width: vw(223, 1200);
+        height: vw(34, 1200);
+        display: grid;
+        place-items: center;
     }
 }

@@ -66,7 +66,67 @@
         border-color: $color transparent transparent transparent;
     }
 }
+@mixin san-spMenu(
+    $direction: bottom,
+    $width: 2.1875vw,
+    $height: 1.09vw,
+    $color: #fff
+) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    $valWidth: calc($width / 2);
+    $valHeight: calc($height / 2);
+    @if ($direction == top) {
+        border-width: 0 $valWidth $height $valWidth;
+        border-color: transparent transparent $color transparent;
+    } @else if ($direction == left) {
+        border-width: $valHeight $width $valHeight 0;
+        border-color: transparent $color transparent transparent;
+    } @else if ($direction == right) {
+        border-width: $valHeight 0 $valHeight $width;
+        border-color: transparent transparent transparent $color;
+    } @else if ($direction == bottom) {
+        border-width: $height $valWidth 0 $valWidth;
+        border-color: $color transparent transparent transparent;
+    }
+}
 @mixin san-pc($direction: bottom, $width: 14px, $height: 7px, $color: #fff) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    $valWidth: calc($width / 2);
+    $valHeight: calc($height / 2);
+    @if ($direction == top) {
+        border-width: 0 $valWidth $height $valWidth;
+        border-color: transparent transparent $color transparent;
+    } @else if ($direction == left) {
+        border-width: $valHeight $width $valHeight 0;
+        border-color: transparent $color transparent transparent;
+    } @else if ($direction == right) {
+        border-width: $valHeight 0 $valHeight $width;
+        border-color: transparent transparent transparent $color;
+    } @else if ($direction == bottom) {
+        border-width: $height $valWidth 0 $valWidth;
+        border-color: $color transparent transparent transparent;
+    }
+    &:hover {
+        @if ($direction == top) {
+            border-width: 0 $valWidth $height $valWidth;
+            border-color: transparent transparent #000 transparent;
+        } @else if ($direction == left) {
+            border-width: $valHeight $width $valHeight 0;
+            border-color: transparent #000 transparent transparent;
+        } @else if ($direction == right) {
+            border-width: $valHeight 0 $valHeight $width;
+            border-color: transparent transparent transparent #000;
+        } @else if ($direction == bottom) {
+            border-width: $height $valWidth 0 $valWidth;
+            border-color: #000 transparent transparent transparent;
+        }
+    }
+}
+@mixin san-lg($direction: bottom, $width: .97vw, $height: .486vw, $color: #fff) {
     width: 0;
     height: 0;
     border-style: solid;

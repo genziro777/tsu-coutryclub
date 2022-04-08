@@ -1,0 +1,156 @@
+@use "setting" as *;
+.slider-2 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: vw(951);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background: url(../../assets/images/TOP/golf-course-sp.jpg);
+    @media not all and (max-width: $pc) {
+        background: url(../../assets/images/TOP/golf-course-pc.jpg);
+
+        width: vw(1140,1200);
+        height: vw(716,1200);
+        margin: 0 0 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    // @media not all and (max-width: 1200px) {
+    //     width: vw(1140, 1200);
+    //     height: vw(716, 1200);
+    //     max-width: 100%;
+    // }
+
+    .slick-dots {
+        position: relative;
+        z-index: 3;
+        text-align: center;
+        margin: -50px 0 0 0;
+        top: 10%;
+    }
+
+    .slick-dots li {
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    .slick-dots button {
+        color: transparent;
+        outline: none;
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 50%;
+        background: #ccc;
+    }
+
+    .slick-dots .slick-active button {
+        background: #333;
+    }
+}
+
+// .slider-2__item01 {
+//     background: url(../../assets/images/TOP/mainvisual-sp.jpg);
+// }
+
+// .slider-2__item02 {
+//     background: url(../../assets/images/TOP/golf-course-sp.jpg);
+// }
+
+// .slider-2__item03 {
+//     background: url(../../assets/images/TOP/golf-originalCourse.jpg);
+// }
+.slider-2__item {
+    position: relative;
+    margin-left: 21vw;
+    margin-top: 35vw;
+
+    @media not all and (max-width: $pc) {
+        width: 100%;
+        height: 100%;
+        margin-top:0;
+        margin-left: 0;
+        padding-left: vw(250,1200);
+        padding-top: vw(100,1200);
+    }
+}
+
+.slider-2__ttl {
+    margin-bottom: 4vw;
+    font-size: vw(25);
+    font-weight: bold;
+    @include ls(400);
+    @media not all and (max-width: $pc) {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    @media not all and (max-width: 1200px) {
+        font-size: vw(25, 1200);
+        margin-bottom: vw(10, 1200);
+    }
+}
+.slider-2__subTtl {
+    margin-bottom: 19vw;
+    font-size: vw(17);
+    font-weight: normal;
+    @include ls(400);
+    @media not all and (max-width: $pc) {
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
+    @media not all and (max-width: 1200px) {
+        font-size: vw(17, 1200);
+        margin-bottom: vw(60, 1200);
+    }
+}
+.slider-2__text {
+    margin-bottom: 9vw;
+    font-size: vw(14);
+    font-weight: normal;
+    @include ls(200);
+    width: vw(405);
+    @include lh(14, 28);
+    @media not all and (max-width: $pc) {
+        font-size: 14px;
+        @include lh(14, 24);
+        margin-bottom: 60px;
+        width: 578px;
+    }
+    @media not all and (max-width: 1200px) {
+        font-size: vw(14, 1200);
+        margin-bottom: vw(60, 1200);
+        width: vw(578, 1200);
+    }
+}
+.slider-2__text--mb {
+    @media not all and (max-width: $pc) {
+        margin-bottom: 15px;
+    }
+    @media not all and (max-width: 1200px) {
+        margin-bottom: vw(15, 1200);
+    }
+}
+.slider-2__bar {
+    width: vw(11);
+    height: vw(526);
+    position: absolute;
+    top: vw(-100);
+    left: vw(-60);
+    @media not all and (max-width: $pc) {
+        width: 11px;
+        height: 471px;
+        top: -132px;
+        left: -150px;
+    }
+    @media not all and (max-width: $md) {
+        width: vw(11, 1200);
+        height: vw(471, 1200);
+        top: vw(-132,1200);
+        left: vw(-150,1200);
+    }
+}

@@ -6,30 +6,5 @@
     font-weight: normal;
     src: url("../../assets/fonts/Noto-sans/NotoSans400-subset.woff")
         format("woff");
-    font-display: swap;//swapが良い
-}
-@font-face {
-    font-family: "NotoSans";//weight違いも同じ名前で書いていけばOK
-    font-style: normal;
-    font-weight: bold;
-    src: url("./../../assets/fonts/Noto-sans/NotoSans700-subset.woff")
-        format("woff");
     font-display: swap;
 }
-
-@font-face {
-    font-family: "NotoSerif";
-    font-style: normal;
-    font-weight: 400;
-    src: url("../../assets/fonts/Noto-serif/NotoSerif400-subset.woff")
-        format("woff");
-    font-display: swap;
-}
-
-/*
-下記のような形で複数指定できる
-    src: url('../font/notosans_medium.ttf') format('truetype'),
-    url('../font/notosans_medium.woff') format('woff'),
-    url('../font/notosans_bold.ttf') format('truetype'),
-    url('../font/notosans_bold.woff') format('woff');
-*/

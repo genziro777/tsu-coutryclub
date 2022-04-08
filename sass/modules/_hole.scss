@@ -1,0 +1,88 @@
+@use "setting" as *;
+
+.hole {
+    width: vw(244);
+    height: vw(502);
+    background-color: #fff;
+    padding: vw(15);
+    @media not all and (max-width: $pc){
+        width: 244px;
+        height: 502px;
+        padding: 15px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(244,1440);
+        height: vw(502,1440);
+        padding: vw(15,1440);
+
+    }
+}
+.hole__header {
+    color: c(main);
+    text-align: center;
+}
+.hole__num,
+.hole__text--l
+ {
+    font-size: vw(18);
+    font-weight: bold;
+    @include ls(400);
+    @include lh(18,32);
+    position: relative;
+    @media not all and (max-width: $pc){
+        @include rem(18);
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(18,1440);
+    }
+}
+.hole__num::before {
+    position: absolute;
+    content: "";
+    width: vw(116);
+    height: vw(1);
+    background-color: c(main);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @media not all and (max-width: $pc){
+        width: 116px;
+        height: 1px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(116,1440);
+    }
+}
+.hole__text--s {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: ff(en);
+    font-size: vw(13);
+    @include ls(100);
+    color: c(main);
+    text-align: center;
+    width: 100%;
+    @media not all and (max-width: $pc){
+        @include rem(13);
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(13,1440);
+    }
+}
+.hole__img {
+    position: relative;
+    width: 100%;
+    height: vw(402);
+    @media not all and (max-width: $pc){
+        height: 402px;
+    }
+    @media not all and (max-width: $lg){
+        height: vw(402,1440);
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

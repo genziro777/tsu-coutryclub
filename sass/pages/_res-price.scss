@@ -24,11 +24,17 @@
     @media not all and (max-width: $pc) {
         margin-bottom: 53px !important;
     }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(53,1440) !important;
+    }
 }
 .price__subTtl {
     margin-bottom: 10.7vw;
     @media not all and (max-width: $pc) {
         margin-bottom: 82px !important;
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(82,1440) !important;
     }
 }
 .pageNav {
@@ -37,6 +43,10 @@
     @media not all and (max-width: $pc) {
         width: 314px;
         margin-bottom: 94px;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(314,1440);
+        margin-bottom: vw(94,1440);
     }
 }
 .pageNav__list {
@@ -50,6 +60,9 @@
     @include ls(100);
     @media not all and (max-width: $pc) {
         @include rem(16);
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(16,1440);
     }
     a {
         position: relative;
@@ -85,7 +98,7 @@
     text-align: center;
 }
 .iframe-plan {
-    width: 88.5%;
+    width: 95%;
     aspect-ratio: 566/551;
     margin: 0 auto vw(112);
     overflow-x: scroll;
@@ -96,8 +109,20 @@
         padding: 0 20px;
         margin-bottom: 159px;
     }
+    @media not all and (max-width: $lg){
+        max-width: vw(920,1440);
+        height: vw(574,1440);
+        padding: 0 vw(20,1440);
+        margin-bottom: vw(159,1440);
+    }
     iframe {
-        width: 150%;
+        width: 165%;
         height: 100%;
+        @media not all and (max-width: $pc){
+            width: 130%;
+        }
+        @media not all and (max-width: $lg){
+            width: 100%;
+        }
     }
 }

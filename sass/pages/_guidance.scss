@@ -9,7 +9,11 @@
         width: 100%;
         padding: 0 20px;
     }
-
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(168,1440);
+        max-width: vw(940,1440);
+        padding: 0 vw(20,1440);
+    }
 }
 .guidance__ttl {
     text-align: center;
@@ -17,23 +21,33 @@
     @media not all and (max-width: $pc){
         padding-top: 125px;
     }
-
+    @media not all and (max-width: $lg){
+        padding-top: vw(125,1440);
+    }
 }
 .guidance__ttl--en {
     font-family: ff(en);
     font-size: vw(23);
     margin-bottom: 1.44vw;
     @media not all and (max-width: $pc){
-        font-size: 32px;
+        @include rem(32);
         margin-bottom: 14px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(32,1440);
+        margin-bottom: vw(14,1440);
     }
 }
 .guidance__ttl--ja {
     font-size: vw(19);
     margin-bottom: 4.45vw;
     @media not all and (max-width: $pc){
-        font-size: 20px;
+        @include rem(20);
         margin-bottom: 70px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(20,1440);
+        margin-bottom: vw(70,1440);
     }
 }
 .guidance__img {
@@ -46,6 +60,10 @@
         height: 470px;
         margin-bottom: 58px;
     }
+    @media not all and (max-width: $lg){
+        height: vw(470,1440);
+        margin-bottom: vw(58,1440);
+    }
 }
 .heading-lv1 {
     font-size: vw(20);
@@ -56,7 +74,12 @@
         width: 800px;
         margin: 0 auto 48px;
         text-align: center;
-        font-size: 20px;
+        @include rem(20);;
+    }
+    @media not all and (max-width: $lg){
+        width: vw(800,1440);
+        margin: 0 auto vw(48,1440);
+        font-size: vw(20,1440);
     }
 }
 .heading-lv2__wrap {
@@ -65,6 +88,11 @@
         width: 800px;
         margin: 0 auto 64px;
     }
+    @media not all and (max-width: $lg){
+        width: vw(800,1440);
+        margin: 0 auto vw(64,1440);
+
+    }
 }
 .heading-lv2 {
     font-size: vw(18);
@@ -72,8 +100,12 @@
     @include ls(100);
     margin-bottom: 2.3vw;
     @media not all and (max-width: $pc){
-        font-size: 18px;
+        @include rem(18);
         margin-bottom: 15px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(18,1440);
+        margin-bottom: vw(15,1440);
     }
 
 }
@@ -83,7 +115,10 @@
     @include ls(100);
     text-align: justify;
     @media not all and (max-width: $pc){
-        font-size: 16px;
+        @include rem(16);;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(16,1440);
     }
 }
 .guidance__btn--pc {
@@ -107,6 +142,14 @@
 .guidance__btn2 {
     margin-bottom: vw(51);
     @include ls(100);
+    @media not all and (max-width: $pc){
+        margin-bottom: 97px;
+        margin-top: 172px;
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(97,1440);
+        margin-top: vw(172,1440);
+    }
 }
 .guidanceInfo {
     @media not all and (max-width: $pc){

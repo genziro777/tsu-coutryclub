@@ -1,16 +1,19 @@
 @use "setting" as *;
 
-/*ドットナビゲーションの設定*/
 .slider-3 {
     .slick-dots {
         position: relative;
         z-index: 3;
         text-align: center;
         margin: vw(-50) 0 0 0;
-        top: -72vw;
+        top: -69vw;
         @media not all and (max-width: $pc){
-            top: -688px;
+            top: -624px;
             margin: -50px 0 0 0;
+        }
+        @media not all and (max-width: $lg){
+            top: vw(-624,1440);
+            margin: vw(-50,1440) 0 0 0;
         }
     }
 
@@ -20,11 +23,15 @@
     }
 
     .slick-dots li {
-        width: vw(47);
+        width: vw(115);
         height: vw(5);
         @media not all and (max-width: $pc){
-            width: 47px;
+            width: 125px;
             height: 5px;
+        }
+        @media not all and (max-width: $lg){
+            width: vw(125,1440);
+            height: vw(5,1440);
         }
     }
     .slick-dots li button:before {
@@ -36,9 +43,16 @@
         @media not all and (max-width: $pc){
             height: 1px;
         }
+        @media not all and (max-width: $lg){
+            height: vw(1,1440);
+        }
     }
     .slick-dots li.slick-active button:before {
         background: #041D00;
     }
-
+    .slick-dotted .slick-slider {
+        @media not all and (max-width: $lg){
+            margin-bottom: 4vw !important;
+        }
+    }
 }

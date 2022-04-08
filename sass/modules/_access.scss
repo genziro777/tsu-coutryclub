@@ -3,13 +3,28 @@
 .access {
     background-color: #fff;
     color: c(text-bk);
-    padding-top: vw(63);
+    padding-top: 9vw;
     text-align: center;
     width: vw(474);
     margin: 0 auto;
+    @media not all and (max-width: $pc) {
+        width: 800px;
+        padding-top: 114.2px;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(800, 1440);
+        padding-top: vw(114.2, 1440);
+    }
 }
 .access__num {
     margin-bottom: vw(30);
+    @media not all and (max-width: $pc) {
+        margin-bottom: 22px;
+    }
+    @media not all and (max-width: $lg) {
+        margin-bottom: vw(22, 1440);
+        font-size: vw(18,1440);
+    }
 }
 
 .access__ttl {
@@ -17,20 +32,54 @@
     font-size: vw(22);
     @include ls(400);
     margin-bottom: vw(17);
+    @media not all and (max-width: $pc) {
+        @include rem(22);
+        margin-bottom: 11px;
+    }
+    @media not all and (max-width: $lg) {
+        font-size: vw(22, 1440);
+        margin-bottom: vw(11, 1440);
+    }
 }
 
 .access__subTtl {
     font-size: vw(16);
     @include ls(400);
     margin-bottom: vw(80);
+    @media not all and (max-width: $pc) {
+        @include rem(14);
+        margin-bottom: 20px;
+    }
+    @media not all and (max-width: $lg) {
+        margin-bottom: vw(20, 1440);
+        font-size: vw(14, 1440);
+    }
 }
 
 .address {
     font-size: vw(16);
     @include ls(400);
+    margin-top: -2vw;
+    @media not all and (max-width: $pc) {
+        @include rem(14);
+        margin-top: 88px;
+        @include lh(14, 24);
+        margin-bottom: 123px;
+    }
+    @media not all and (max-width: $lg) {
+        font-size: vw(14, 1440);
+        margin-top: vw(88, 1440);
+        margin-bottom: vw(123, 1440);
+    }
 }
 .address__ttl {
-    margin-bottom: vw(30);
+    margin-bottom: 3.8vw;
+    @media not all and (max-width: $pc) {
+        margin-bottom: 22px;
+    }
+    @media not all and (max-width: $lg) {
+        margin-bottom: vw(22, 1440);
+    }
 }
 .address__tel {
     display: inline-block;
@@ -42,10 +91,8 @@
     height: vw(72);
     display: grid;
     place-items: center;
-    margin: 0 auto;
+    margin: 9vw auto 2.8vw;
     position: relative;
-    margin-top: vw(60);
-    margin-bottom: vw(22);
     &::before {
         content: "";
         display: inline-block;
@@ -56,9 +103,23 @@
         vertical-align: middle;
         position: absolute;
         left: 9%;
+        margin-left: 2.8vw;
+    }
+    @media not all and (max-width: $pc) {
+        display: none;
     }
 }
-
+.address__tel--inner {
+    margin-left: 3vw;
+}
+.address__text {
+    @media not all and (max-width: $pc) {
+        margin-bottom: 24px;
+    }
+    @media not all and (max-width: $lg) {
+        margin-bottom: vw(24, 1440);
+    }
+}
 .access__btn {
     color: c(main);
     font-size: vw(16);
@@ -68,7 +129,7 @@
     position: relative;
     padding-left: vw(10);
     margin-left: vw(9);
-    margin-bottom: vw(60);
+    margin-bottom: 9vw;
     &::before {
         content: "";
         position: absolute;
@@ -78,10 +139,50 @@
         color: c(main);
         left: vw(-3);
     }
+    @media not all and (max-width: $pc) {
+        display: none;
+    }
+}
+.mapWrap {
+    @media not all and (max-width: $pc) {
+        width: 800px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: space-between;
+        margin: 0 auto 60px;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(800, 1440);
+        margin: 0 auto vw(60, 1440);
+    }
 }
 .map1 {
     margin-bottom: vw(55);
+   width: vw(399);
+   height: vw(214);
+    @media not all and (max-width: $pc) {
+        margin-bottom: 0;
+        width: 377px;
+        height: 285px;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(377, 1440);
+        height: vw(285, 1440);
+    }
 }
 .map2 {
     margin-bottom: vw(12);
+    width: vw(399);
+    height: vw(214);
+ 
+
+    @media not all and (max-width: $pc) {
+        margin-bottom: 0;
+        width: 377px;
+        height: 285px;
+    }
+    @media not all and (max-width: $lg) {
+        width: vw(377, 1440);
+        height: vw(285, 1440);
+    }
 }

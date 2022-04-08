@@ -13,19 +13,24 @@
 .cards {
     display: grid;
     flex-wrap: wrap;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 46.1vw);
     gap: vw(15);
     justify-content: center;
     width: 100%;
-    padding-right: vw(20);
+    // padding-right: vw(20);
     @media not all and (max-width: $pc){
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 242px);
         gap: 20px;
         justify-content: space-between;
         max-width: 900px;
         width: 100%;
         margin: 0 auto;
-        padding-right: 0;
-        padding: 0 20px;
+    }
+    @media not all and (max-width: $lg){
+        grid-template-columns: repeat(3, vw(242,1440));
+        gap: vw(20,1440);
+        max-width: vw(900,1440);
+
+
     }
 }

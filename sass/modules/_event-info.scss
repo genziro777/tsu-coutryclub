@@ -3,10 +3,12 @@
 .eventInfo {
     padding-bottom: 12.5vw;
     background-color: c(main);
-    padding-left: vw(20);
     @media not all and (max-width: $pc){
         text-align: center;
-        padding-bottom: 172px;
+        padding-bottom: 75px;
+    }
+    @media not all and (max-width: $lg){
+        padding-bottom: vw(75,1440);
     }
 
 }
@@ -17,11 +19,21 @@
         padding: 0 20px;
         margin: 0 auto;
     }
+    @media not all and (max-width: $lg){
+        max-width: vw(940,1440);
+        padding: 0 vw(20,1440);
+    }
 }
 .eventInfo__num {
-    margin-bottom: vw(30);
+    margin-bottom: 3.1vw;
+    text-align: center;
+
     @media not all and (max-width: $pc){
         margin-bottom: 31px;
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(31,1440) ;
+        font-size: vw(18,1440);
     }
 
 }
@@ -30,12 +42,18 @@
     font-family: ff(en);
     font-size: vw(22);
     @include ls(400);
-    margin-bottom: vw(17);
+    text-align: center;
+
+    margin-bottom: 1.3vw;
     @media not all and (max-width: $pc){
-        font-size: 22px;
+        @include rem(22);
         font-weight: bold;
         margin-bottom: 19px;
 
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(22,1440);
+        margin-bottom: vw(19,1440);
     }
 }
 
@@ -43,14 +61,19 @@
 .eventInfo__subTtl {
     font-size: vw(16);
     @include ls(400);
-    margin-bottom: vw(80);
+    margin-bottom: 11.5vw;
+    text-align: center;
     @media not all and (max-width: $pc){
-        font-size: 14px;
+        @include rem(14);
         margin-bottom: 90px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(14,1440);
+        margin-bottom: vw(90,1440);
     }
 }
 .eventInfo__btn {
-    margin: 0 auto;
+    margin: 2vw auto 2vw;
     @media not all and (max-width: $pc){
         margin: 0 0 0 auto;
         border: none;
@@ -66,7 +89,7 @@
             height: 1px;
             background-color: #fff;
             position: absolute;
-            top: 34px;
+            top: 39px;
             right: 0;
             transition: .2s;
         }
@@ -76,6 +99,13 @@
         }
         &:hover::after {
             background-color: c(text-bk);
+        }
+    }
+    @media not all and (max-width: $lg){
+        &::after {
+            width: vw(460,1440);
+            height: vw(1,1440);
+            top: vw(39,1440);
         }
     }
 }

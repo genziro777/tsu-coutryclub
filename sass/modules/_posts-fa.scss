@@ -8,11 +8,18 @@
         max-width: 940px;
         padding: 0 20px;
     }
+    @media not all and (max-width: $lg){
+        max-width: vw(940,1440);
+        padding: 0 vw(20,1440);
+    };
 }
 .faci-posts__item {
-    margin-bottom: 22vw;
+    margin-bottom: 10vw !important;
     @media not all and (max-width: $pc){
-        margin-bottom: 0;
+        margin-bottom: 30px !important;
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(30) !important;
     }
 }
 
@@ -25,6 +32,10 @@
         width: 100%;
         height: 470px;
         margin-bottom: 48px;
+    }
+    @media not all and (max-width: $lg){
+        height: vw(470,1440);
+        margin-bottom: vw(48,1440);
     }
 }
 .faci-post__img {
@@ -42,73 +53,17 @@
     font-weight: bold;
     @include ls(100);
     @include lh(16,24);
-    margin-bottom: 4.6vw;
+    margin-bottom: 2vw;
     text-align: justify;
     @media not all and (max-width: $pc) {
-        font-size: 16px;
+        @include rem(16);
         @include ls(100);
         width: 738px;
-        margin: 0 auto 92px;
+        margin: 0 auto 30px;
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(16,1440);
+        width: vw(738,1440);
+        margin: 0 auto vw(50,1440);
     }
 }
-// .faci-post__link {
-//     font-size: vw(16);
-//     font-weight: bold;
-//     display: block;
-//     text-align: right;
-//     @include ls(100);
-//     position: relative;
-//     width: vw(242);
-//     margin: 0 0 0 auto;
-//     transition: .2s;
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 1.2vw;
-//         left: 18.5vw;
-//         transform: translateX(-50%) rotate(-90deg);
-//         @include san;
-//         transition: 0.2s;
-//         @media not all and (max-width: $pc) {
-//             @include san-pc;
-//             left: 117px;
-//             top: 50%;
-//             transform: translate(-50%, -50%) rotate(-90deg);
-//         }
-//     }
-//     &::after {
-//         position: absolute;
-//         content: "";
-//         width: vw(242);
-//         height: vw(1);
-//         background-color: #fff;
-//         right: 0;
-//         bottom: -1vw;
-//         margin-top: vw(20);
-//         transition: 0.2s;
-
-//         @media not all and (max-width: $pc) {
-//             width: 100%;
-//             height: 1px;
-//             bottom: -5px;
-//             margin-top: 0;
-//         }
-//     }
-//     @media not all and (max-width: $pc) {
-//         font-size: 16px;
-//         margin-bottom: 0;
-//         width: 242px;
-//         &:hover::after {
-//             background-color: c(text-bk);
-//         }
-//         &:hover::before {
-//             @include san-pc-hover;
-//         }
-//         &:hover {
-//             color: c(text-bk);
-//         }
-//     }
-//     a {
-//         transition: 0.2s;
-//     }
-// }

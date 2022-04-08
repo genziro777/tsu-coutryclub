@@ -1,6 +1,5 @@
 @use "setting" as *;
 
-//　矢じるしバージョン ////////////////////////////////////////////////
 .accordion {
     list-style: none;
     margin: 0 auto;
@@ -9,6 +8,10 @@
         margin-bottom: 131px;
         width: 850px;
         margin: 0 0 0 auto;
+    }
+    @media not all and (max-width: $lg){
+        margin-bottom: vw(131,1440);
+        width: vw(850,1440);
     }
 }
 .accordion__list {
@@ -22,6 +25,10 @@
     border-bottom: vw(1) solid #ccc;
     @media not all and (max-width: $pc){
         border-bottom: 1px solid #ccc;
+
+    }
+    @media not all and (max-width: $lg){
+        border-bottom: vw(1,1440) solid #ccc;
 
     }
 }
@@ -38,9 +45,11 @@
         padding: 3% 3% 0.6% 5%;
 
     }
+    @media not all and (max-width: $lg){
+        font-size: vw(20,1440);
+    }
 }
-.accordion__title--ja,
-.accordion__text {
+.accordion__title--ja {
     font-size: vw(16);
     font-weight: bold;
     @include ls(100);
@@ -48,15 +57,33 @@
     @media not all and (max-width: $pc){
         @include rem(16);
     }
+    @media not all and (max-width: $lg){
+        font-size: vw(16,1440);
+    }
+}
+
+.accordion__text {
+    font-size: vw(16);
+    @include ls(100);
+    @include lh(16,24);
+    @media not all and (max-width: $pc){
+        @include rem(16);
+    }
+    @media not all and (max-width: $lg){
+        font-size: vw(16,1440);
+    }
+
 }
 .accordion__title--ja {
     margin-left: 1.4vw;
     @media not all and (max-width: $pc){
         margin-left: 9px;
     }
+    @media not all and (max-width: $lg){
+        margin-left: vw(9,1440);
+    }
 }
 
-//アイコンの矢じるし*/
 .accordion__title::before {
     content: "";
     position: absolute;
@@ -69,6 +96,9 @@
         @include san-pc;
         top: 65.5%;
         left: 2%;
+    }
+    @media not all and (max-width: $lg){
+        @include san-lg;
     }
 }
 //　closeというクラスがついたら形状変化　*/
@@ -87,5 +117,10 @@
         margin-top: 10px;
         margin-bottom: -2px;
 
+    }
+    @media not all and (max-width: $lg){
+        padding: 0 vw(50,1440) vw(10,1440) vw(30,1440);
+        margin-top: vw(10,1440);
+        margin-bottom: vw(-2,1440);
     }
 }
