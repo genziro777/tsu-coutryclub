@@ -8,13 +8,13 @@ $font-family: (
     // best-sansは池田氏推奨のもの
     baseFont:
         (
-        'YuMincho','Yu Mincho','游明朝体',sans-serif
+        'YuMincho','Yu Mincho','游明朝体',serif
         ),
     // Notoフォントを使う場合は下記を有効にせよ
     // notoSans: ("NotoSans", sans-serif),
     // notoSerif: ("NotoSerif", serif),
     //英字フォントについては、上書きの可能性のある（かつ変更の可能性のある）英字フォントは変数として持っておき一括で変更できるようにしておくと便利です。
-    arimo: ('Arimo', sans-serif),
+    arimo: ('Arimo', serif),
     en: ('trajan-pro-3',serif)
 );
 

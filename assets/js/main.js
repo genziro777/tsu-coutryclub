@@ -7,48 +7,48 @@ $("#hamburger").click(function () {
 /* =============== スライダー============================== */
 
 $(".slider-1").slick({
-    fade: true, //切り替えをフェードで行う。初期値はfalse。
+    fade: true, 
     infinite: true,
-    // autoplay: true,//自動的に動き出すか。初期値はfalse。
-    autoplaySpeed: 5000, //次のスライドに切り替わる待ち時間
-    speed: 1000, //スライドの動きのスピード。初期値は300。
+    // autoplay: true,
+    autoplaySpeed: 3000, 
+    speed: 500, 
     arrows: false,
-    dots: true, //下部ドットナビゲーションの表示
+    dots: true, 
 });
 $(".slider-2").slick({
-    // autoplay: true, //自動的に動き出すか。初期値はfalse。
+    autoplay: true,
     infinite: true,
-    autoplaySpeed: 2000, //次のスライドに切り替わる待ち時間
-    speed: 1000, //スライドの動きのスピード。初期値は300。
+    autoplaySpeed: 3000, 
+    speed: 500, 
     arrows: false,
-    dots: true, //下部ドットナビゲーションの表示
+    dots: true, 
     vertical: true,
+
 });
 $(".slider-3").slick({
-    fade: true, //切り替えをフェードで行う。初期値はfalse。
     infinite: true,
-    // autoplay: true,//自動的に動き出すか。初期値はfalse。
-    autoplaySpeed: 5000, //次のスライドに切り替わる待ち時間
-    speed: 1000, //スライドの動きのスピード。初期値は300。
+    autoplay: true,
+    autoplaySpeed: 3000, 
+    speed: 500, 
     arrows: false,
-    dots: true, //下部ドットナビゲーションの表示
+    dots: true, 
 });
 $(".slider-4").slick({
-    // autoplay: true,//自動的に動き出すか。初期値はfalse。
+    autoplay: true,
     infinite: true,
-    autoplaySpeed: 5000, //次のスライドに切り替わる待ち時間
-    speed: 500, //スライドの動きのスピード。初期値は300。
+    autoplaySpeed: 3000, 
+    speed: 500, 
     arrows: true,
-    dots: true, //下部ドットナビゲーションの表示
+    dots: true, 
     prevArrow: '<div class="slide-arrow slick-prev"></div>',
     nextArrow: '<div class="slide-arrow slick-next"></div>',
     centerMode: true,
     centerPadding: "3.1%",
-    slidesToShow: 3, //スライドを画面に3枚見せる
-    slidesToScroll: 1, //1回のスクロールで1枚の写真を移動して見せる
+    slidesToShow: 3, 
+    slidesToScroll: 1, 
     responsive: [
         {
-            breakpoint: 850, //399px以下のサイズに適用
+            breakpoint: 850, 
             settings: {
                 slidesToShow: 1,
                 centerPadding: "23%",
@@ -56,7 +56,7 @@ $(".slider-4").slick({
         },
     ],
 });
-const $slider = $(".js-slider"); //このクラスを新しく付与
+const $slider = $(".js-slider"); 
 
 $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
     $slider.find(".slick-slide").each((index, el) => {
@@ -75,7 +75,7 @@ $slider.on("beforeChange", (event, slick, currentSlide, nextSlide) => {
                 $this.removeClass("is-active-next");
             }
         } else {
-            $this.removeClass("is-active-next"); //このクラスを.slick-currentのところに追加
+            $this.removeClass("is-active-next"); 
         }
     });
 });
@@ -115,3 +115,7 @@ if (touch) {
 /* =============== no-js判定 ==================================== */
 
 document.documentElement.classList.remove("no-js");
+
+/* =============== パララックス ==================================== */
+
+var rellax = new Rellax('.js-rellax');

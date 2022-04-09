@@ -101,7 +101,8 @@
     width: 95%;
     aspect-ratio: 566/551;
     margin: 0 auto vw(112);
-    overflow-x: scroll;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; 
     @media not all and (max-width: $pc) {
         max-width: 920px;
         width: 100%;

@@ -79,7 +79,7 @@
 tbody,
 td,
 th {
-    border: vw(1) solid #fff;
+    border: .25vw solid #fff;
     width: vw(566);
     @media not all and (max-width: $pc) {
         width: 438px;
@@ -376,12 +376,16 @@ th {
         padding: 0;
     }
     .text-15-200 {
-        @include ls(200);
+        @include ls(100);
         @media not all and (max-width: $pc){
             @include rem(13);
+            @include ls(200);
+
         }
         @media not all and (max-width: $lg){
             font-size: vw(13,1440);
+            @include ls(200);
+
         }
     }
 }

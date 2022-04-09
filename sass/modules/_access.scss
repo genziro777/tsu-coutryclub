@@ -102,7 +102,7 @@
         background-size: contain;
         vertical-align: middle;
         position: absolute;
-        left: 9%;
+        left: 7.8%;
         margin-left: 2.8vw;
     }
     @media not all and (max-width: $pc) {
@@ -125,7 +125,7 @@
     font-size: vw(16);
     font-weight: bold;
     @include ls(100);
-    text-align-last: left;
+    text-align: left;
     position: relative;
     padding-left: vw(10);
     margin-left: vw(9);
