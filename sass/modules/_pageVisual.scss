@@ -100,12 +100,10 @@
         @include rem(20);
         padding-top: 71px;
         padding-left: 0;
-        width:900px;
         margin: 0 auto 19px;
     }
     @media not all and (max-width: $lg){
         padding-top: vw(71,1440);
-        width: vw(900,1440);
         margin: 0 auto vw(19,1440);
         font-size: vw(20,1440);
     }
@@ -118,12 +116,10 @@
 
     @media not all and (max-width: $pc){
         @include rem(14);
-        width: 900px;
         padding-left: 0px;
         margin: 0 auto 95px;
     }
     @media not all and (max-width: $lg){
-        width: vw(900,1440);
         margin: 0 auto vw(95,1440);
         font-size: vw(14,1440);
     }

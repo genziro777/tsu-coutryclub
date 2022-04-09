@@ -68,15 +68,14 @@
     }
     @media not all and (max-width: $pc) {
         @include rem(32);
-        padding-top: 166px;
-        padding-left: 0;
-        width:900px;
+        max-width:900px;
         margin: 0 auto 16px;
+        padding: 166px 0 0;
     }
     @media not all and (max-width: $lg){
         font-size: vw(32,1440);
-        padding-top: vw(166,1440);
-        width: vw(900,1440);
+        padding: vw(166,1440) 0 0;
+        max-width: vw(900,1440);
         margin: 0 auto vw(16,1440);
     }
 }
@@ -88,13 +87,13 @@
     @media not all and (max-width: $pc) {
         @include rem(20);
         padding-left: 0px;
-        width:900px;
+        max-width:900px;
         margin: 0 auto 95px;
 
     }
     @media not all and (max-width: $lg){
         font-size: vw(20,1440);
-        width: vw(900,1440);
+        max-width: vw(900,1440);
         margin: 0 auto vw(95,1440);
     }
 }
@@ -111,6 +110,9 @@
                 }
                 &::before {
                     @include san-pc-hover;
+                    @media not all and (max-width: $lg){
+                        @include san-pc-hover(bottom, .97vw, .486vw,#000);
+                    }
                 }
             }
         }

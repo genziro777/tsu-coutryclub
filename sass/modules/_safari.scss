@@ -1,0 +1,30 @@
+@use "setting" as *;
+
+_:lang(x)+_:-webkit-full-screen-document, body {
+    .card__link::before {
+        @media not all and (max-width: $pc){
+            left: 115px;
+        }
+        @media not all and (max-width: $lg){
+            left: vw(115,1440);
+        }
+    }
+    .slider-4 .slick-dots li button {
+        @media not all and (max-width: $pc){
+            height: 100%;
+            @include rem(25);
+        }
+        @media not all and (max-width: $lg){
+            font-size: vw(25,1440);
+        }
+    }
+    .post__link2::before {
+        @media not all and (max-width: $pc){
+            left: 111px;
+
+        }
+        @media not all and (max-width: $lg){
+            left: vw(111,1440);
+        }
+    }
+  }

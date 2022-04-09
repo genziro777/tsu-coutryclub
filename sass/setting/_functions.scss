@@ -22,28 +22,6 @@ $font-family: (
     @return #{map-get($font-family, $ff)};
 }
 
-// font-size 設定 ///////////////////////////////////////////////////
-// 使い方の例 font-size: fz(h-lv1);
-$font-size: (
-    // pc版
-    h-lv1: math.div(32, 16) + rem,
-    h-lv2: math.div(24, 16) + rem,
-    h-lv3: math.div(20, 16) + rem,
-    h-lv4: math.div(16, 16) + rem,
-    text-m: math.div(16, 16) + rem,
-    text-s: math.div(12, 16) + rem,
-    // sp版
-    h-sp-lv1: math.div(32, 640) * 100vw,
-    h-sp-lv2: math.div(24, 640) * 100vw,
-    h-sp-lv3: math.div(20, 640) * 100vw,
-    h-sp-lv4: math.div(16, 640) * 100vw,
-    text-sp-m: math.div(16, 640) * 100vw,
-    text-sp-s: math.div(12, 640) * 100vw
-);
-
-@function fz($fz) {
-    @return #{map-get($font-size, $fz)};
-}
 
 // pxをvw変換 /////////////////////////////////////////////////////////
 // まず基本のブレイクポイントを設定（$base: 850）←この部分。このブレイクポイントでよければ margin: vw(40); でOK
@@ -63,7 +41,6 @@ $font-size: (
 $colors: (
     main: #6f7d6d,
     sub: #b7beb6,
-    accent: red,
     text-bk: #001405,
     text-wh: #fff,
     gray: #363636,

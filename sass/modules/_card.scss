@@ -90,8 +90,10 @@
         }
         @media not all and (max-width: $lg){
             left: vw(122,1440);
+            @include san-pc(bottom, .97vw, .485vw, #fff);
         }
     }
+
     &::after {
         position: absolute;
         content: "";

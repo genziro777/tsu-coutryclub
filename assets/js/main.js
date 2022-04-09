@@ -4,6 +4,7 @@ $("#hamburger").click(function () {
     $(".globalNav--sp").toggleClass("js-slideIn").css("opacity", "1");
     $("body").toggleClass("no-scroll");
 });
+
 /* =============== スライダー============================== */
 
 $(".slider-1").slick({
@@ -23,7 +24,7 @@ $(".slider-2").slick({
     arrows: false,
     dots: true, 
     vertical: true,
-
+    verticalSwiping:true,
 });
 $(".slider-3").slick({
     infinite: true,

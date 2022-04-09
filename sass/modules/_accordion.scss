@@ -6,12 +6,12 @@
     margin-bottom: vw(132);
     @media not all and (max-width: $pc){
         margin-bottom: 131px;
-        width: 850px;
+        max-width: 850px;
         margin: 0 0 0 auto;
     }
     @media not all and (max-width: $lg){
         margin-bottom: vw(131,1440);
-        width: vw(850,1440);
+        max-width: vw(850,1440);
     }
 }
 .accordion__list {

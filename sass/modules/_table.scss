@@ -3,8 +3,8 @@
 .table-grid {
     @media not all and (max-width: $pc) {
         display: grid;
-        grid-template-columns: repeat(2, 438px);
-        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.67%;
         max-width: 940px;
         width: 100%;
         padding: 0 20px;
@@ -68,7 +68,7 @@
     margin: 0 auto;
     margin-bottom: 5.4vw;
     @media not all and (max-width: $pc) {
-        width: 438px;
+        width: 100%;
         margin-bottom: 55px;
     }
     @media not all and (max-width: $lg) {
@@ -79,10 +79,10 @@
 tbody,
 td,
 th {
-    border: .25vw solid #fff;
+    border: 1px solid #fff;
     width: vw(566);
     @media not all and (max-width: $pc) {
-        width: 438px;
+        width: 100%;
         border: 1px solid #fff;
     }
     @media not all and (max-width: $lg) {
@@ -105,6 +105,17 @@ th {
 .table__bgc {
     background-color: c(sub);
     color: c(text-bk);
+}
+.tableCourse {
+    @media not all and (max-width: $pc){
+        max-width: 940px;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+    @media not all and (max-width: $lg){
+        max-width: vw(940,1440);
+        padding: 0 vw(20,1440);
+    }
 }
 .table__ttl {
     margin-bottom: 1.7vw;
@@ -213,11 +224,16 @@ th {
     }
 }
 .table__note--wrap {
+
     @media not all and (max-width: $pc) {
-        margin-top: -101px;
+        max-width: 940px;
+        padding: 0 20px;
+       margin: -101px auto 0;
     }
     @media not all and (max-width: $lg) {
-        margin-top: vw(-101, 1440);
+        max-width: vw(940,1440);
+        padding: 0 vw(20,1440);
+        margin: vw(-101,1440) auto 0;
     }
 }
 .table__note {
@@ -226,12 +242,11 @@ th {
     font-size: vw(16);
     @include ls(400);
     @media not all and (max-width: $pc) {
-        width: 900px;
+        width: 100%;
         @include rem(14);
         margin-bottom: 3px;
     }
     @media not all and (max-width: $lg) {
-        width: vw(900, 1440);
         font-size: vw(14, 1440);
         margin-bottom: vw(3, 1440);
     }
@@ -353,11 +368,12 @@ th {
     height: vw(362);
     margin-bottom: vw(86);
     @media not all and (max-width: $pc) {
-        width: 100%;
-        max-width: 900px;
-        padding: 0 20px;
+        max-width: 940px;
         margin-bottom: 79px;
         height: 362px;
+        width: 100%;
+        padding: 0 20px;
+
     }
     @media not all and (max-width: $lg){
         width: 100%;
